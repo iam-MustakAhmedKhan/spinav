@@ -1,7 +1,7 @@
 [
     {
         "id":1,
-        "title":"classroom",
+        "title":"Classroom",
         "icon":"../../public/assets/icon/classicon.svg",
         "roomsdropdown":[
             {
@@ -185,7 +185,7 @@
 
     {
         "id":2,
-        "title":"laboratory",
+        "title":"Laboratory",
         "icon":"../../public/assets/icon/labicon.svg",
 
         "individual":[
@@ -284,7 +284,7 @@
 
     {
         "id":3,
-        "title":"workshop",
+        "title":"Workshop",
         "icon":"../../public/assets/icon/workshopicon.svg",
         "individual":[
             {
@@ -370,7 +370,7 @@
 
     {
         "id":4,
-        "title":"office",
+        "title":"Office",
         "icon":"../../public/assets/icon/officeicon.svg",
         "roomsdropdown":[
             {
@@ -566,7 +566,7 @@
 
     {
         "id":5,
-        "title":"washroom",
+        "title":"Washroom",
         "icon":"../../public/assets/icon/washroomicon.svg",
         "roomsdropdown":[
             {
@@ -631,7 +631,7 @@
 
     {
         "id":6,
-        "title":"others",
+        "title":"Others",
         "icon":"../../public/assets/icon/othersicon.svg",
         "individual":[
             {
