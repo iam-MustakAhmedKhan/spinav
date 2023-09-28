@@ -1,7 +1,7 @@
 
 const Hero = () => {
     return (
-        <div className='flex flex-col items-center mt-4'>
+        <div className='flex flex-col items-center mt-4 '>
 
             <div className='w-[200px]'>
                 <img className='w-full' src="../../public/assets/img/logo.svg" alt="" />

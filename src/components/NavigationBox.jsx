@@ -1,8 +1,9 @@
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import datas from '../data/data.json';
 import Navibox from './Navibox';
-import { motion, useScroll } from "framer-motion";
+import { motion } from "framer-motion";
 import { FaChevronLeft } from 'react-icons/fa';
+import { useSwipeable } from 'react-swipeable';
 
 
 const NavigationBox = () => {
@@ -17,24 +18,31 @@ const NavigationBox = () => {
         closed: { height: '50%' },
     };
 
-    const handlescroll = () => {
-        setScroll(true)
-        ref.current.focus()
+    const handleFocus = (v) => {
+        setFocus(v)
+        setScroll(v)
+        ref.current.blur()
     }
+
+
+    const swipeHandler = useSwipeable({
+        onSwipedUp: () => setScroll(true),
+        onSwipedDown: () => handleFocus(false)
+        
+    });
 
 
     return (
         <motion.div initial={false}
-            animate={isOpen || isScroll ? "open" : "closed"}
+            animate={isScroll|isOpen ? "open" : "closed"}
             variants={variants}
-            className={`absolute divclass bg-[#EDF6FD] h-[50%] w-full bottom-0 rounded-t-[26px] p-5 overflow-auto scrollbarHide`}
-            onScroll={handlescroll}
-            onClick={() => setScroll(false)}
+            className={`absolute divclass bg-[#EDF6FD] h-[50%] w-full bottom-0 rounded-t-[26px] p-5  scrollbarHide`}
+            {...swipeHandler}
         >
 
             <motion.div className="searchBox">
                 <div className='mx-auto'>
-                    <div className='w-[4rem] h-[6px] rounded-md mx-auto bg-[#051B29]/[0.2] mb-3 mt-[-8px]'></div>
+                    {isOpen | isScroll ? '' : <div className='w-[4rem] h-[6px] rounded-md mx-auto bg-[#051B29]/[0.2] mb-3 mt-[-8px]'></div>}
                     <div className="relative rounded-full flex items-center w-full h-12 bg-[#E6EFF6] overflow-hidden">
                         {isOpen | isScroll ? <button className='text-2xl font-bold ml-2 text-[#051B29]/[0.5]'> <FaChevronLeft /> </button>:""}
                         <input
@@ -43,9 +51,10 @@ const NavigationBox = () => {
                             id="search"
                             placeholder="ex : software lab, 1008, machine shop..."
                             onFocus={() => setFocus(true)}
-                            onBlur={() => setFocus(false)}
+                            onBlur={() => handleFocus(false)}
                             autoComplete='off'
                             ref={ref}
+                            autoFocus={false}
                         />
 
                         <div className="grid place-items-center h-full w-12  text-[#051B29]/[0.5] me-2">
@@ -58,7 +67,7 @@ const NavigationBox = () => {
             </motion.div>
 
 
-            <div className="navigationBoxes grid grid-cols-2 gap-5 items-center justify-between mt-5 pb-10">
+            <div  className="navigationBoxes grid grid-cols-2 gap-5 items-center justify-between mt-5 pb-10">
 
                 {datas.map(data => (
                     <Navibox data={data} key={data.id} />
