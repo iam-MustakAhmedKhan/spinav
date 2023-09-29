@@ -1,16 +1,26 @@
 import { useEffect, useRef, useState } from 'react';
-import datas from '../data/data.json';
-import Navibox from './Navibox';
 import { motion } from "framer-motion";
 import { FaChevronLeft } from 'react-icons/fa';
 import { useSwipeable } from 'react-swipeable';
+import Accordions from './Accordions';
+import datas from '../data/data.json';
+import Navibox from './Navibox';
+import { Link, useLocation, } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { seach } from '../redux/searchSlice.js';
+
 
 
 const NavigationBox = () => {
 
     const [isOpen, setFocus] = useState(false);
     const [isScroll, setScroll] = useState(false);
-    const ref = useRef()
+    const [searchValue, setSerchValue] = useState('');
+
+    const searchText = useSelector(state => state.search.searchValue);
+    const ref = useRef();
+
+    const dispatch = useDispatch();
 
 
     const variants = {
@@ -19,22 +29,39 @@ const NavigationBox = () => {
     };
 
     const handleFocus = (v) => {
-        setFocus(v)
-        setScroll(v)
-        ref.current.blur()
-    }
+        setFocus(v);
+        setScroll(v);
+        ref.current.blur();
+    };
+
+    useEffect(() => {
+        dispatch(seach(searchValue));
+    }, [dispatch, searchValue]);
 
 
     const swipeHandler = useSwipeable({
         onSwipedUp: () => setScroll(true),
         onSwipedDown: () => handleFocus(false)
-        
+
     });
+
+
+    const handleSearch = room => {
+        const roomsearchtitle = room.roomname.toUpperCase();
+        if (roomsearchtitle.includes(searchValue.toUpperCase())) {
+            return true;
+        }
+    };
+
+
+    const location = useLocation().pathname;
+
+
 
 
     return (
         <motion.div initial={false}
-            animate={isScroll|isOpen ? "open" : "closed"}
+            animate={isScroll || isOpen || location !== '/' ? "open" : "closed"}
             variants={variants}
             className={`absolute divclass bg-[#EDF6FD] h-[50%] w-full bottom-0 rounded-t-[26px] p-5  scrollbarHide`}
             {...swipeHandler}
@@ -42,9 +69,9 @@ const NavigationBox = () => {
 
             <motion.div className="searchBox">
                 <div className='mx-auto'>
-                    {isOpen | isScroll ? '' : <div className='w-[4rem] h-[6px] rounded-md mx-auto bg-[#051B29]/[0.2] mb-3 mt-[-8px]'></div>}
+                    {isOpen || isScroll ? '' : <div className='w-[4rem] h-[6px] rounded-md mx-auto bg-[#051B29]/[0.2] mb-3 mt-[-8px]'></div>}
                     <div className="relative rounded-full flex items-center w-full h-12 bg-[#E6EFF6] overflow-hidden">
-                        {isOpen | isScroll ? <button className='text-2xl font-bold ml-2 text-[#051B29]/[0.5]'> <FaChevronLeft /> </button>:""}
+                        {isOpen || isScroll ? <button className='text-2xl font-bold ml-2 text-[#051B29]/[0.5]' onClick={() => handleFocus(false)}> <FaChevronLeft /> </button> : ""}
                         <input
                             className="peer h-full w-full outline-none text-sm text-gray-700 pr-2 bg-[#e6eff6] px-4 font-bold"
                             type="text"
@@ -55,8 +82,8 @@ const NavigationBox = () => {
                             autoComplete='off'
                             ref={ref}
                             autoFocus={false}
+                            onChange={(e) => setSerchValue(e.target.value)}
                         />
-
                         <div className="grid place-items-center h-full w-12  text-[#051B29]/[0.5] me-2">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -67,13 +94,51 @@ const NavigationBox = () => {
             </motion.div>
 
 
-            <div  className="navigationBoxes grid grid-cols-2 gap-5 items-center justify-between mt-5 pb-10">
+            {searchText == '' && <div className={`navigationBoxes grid grid-cols-2 gap-5 items-center justify-between mt-5 pb-10 ${location != '/' ? 'hidden' : ""}`}>
 
                 {datas.map(data => (
                     <Navibox data={data} key={data.id} />
                 ))}
 
+            </div>}
+
+
+            {searchValue !== '' && (
+                datas.map(data => (
+                    data.roomsdropdown.map((room, index) => (
+                        <ul key={index} className="flex flex-col gap-y-1 mt-0">
+                            {room.roomNo.filter(handleSearch).map((v, i) => (
+                                <li key={i} className=" p-3 first:rounded-t-[6px] last:rounded-b-[6px] bg-[#edf6fd]">
+                                    <div className="flex items-center gap-3">
+                                        <div className="w-[50px] h-[50px] rounded-full  bg-[#e6eff6] p-3 ">
+                                            <img className="w-full " src={data.icon} alt="" />
+                                        </div>
+                                        <Link to={`/${v.roomname.replaceAll(' ', '-') }`} className="ml-0 text-left font-semibold">Room No: {v.roomname}</Link>
+                                    </div>
+                                </li>
+                            ))}
+                        </ul>
+                    ))
+                ))
+            )
+            }
+
+            {searchValue !== '' && (datas.map(data => (
+                data.individual.filter(handleSearch).map((v, i) => (
+                    <div key={i} className="bg-[#E6EFF6] flex items-center px-2 py-2 rounded-[12px] gap-y-2 mb-2 mt-2">
+                        <div className="w-[50px] h-[50px] rounded-full  bg-[#edf6fd] p-3 mr-3">
+                            <img className="w-full" src={data.icon} alt="" />
+                        </div>
+                        <Link to={`/${v.roomname.replaceAll(' ', '-')}`} className="ml-0 font-semibold">{v.roomname}</Link>
+                    </div>
+                ))
+            )))}
+
+
+            <div className='mt-5'>
+                <Accordions />
             </div>
+
         </motion.div>
     );
 };

@@ -4,8 +4,9 @@
         "title":"Classroom",
         "icon":"../../public/assets/icon/classicon.svg",
         "roomsdropdown":[
-            {
+            {   "id":1,
                 "title":"Room no : 1006-1012",
+                "icon": "../../public/assets/icon/classicon.svg",
                 "roomNo":[ 
                     {
                         "roomname":"1006",
@@ -41,6 +42,7 @@
             },
 
             {
+                "id":2,
                 "title":"Room no : 2006-2010",
                 "roomNo":[ 
                     {
@@ -71,6 +73,7 @@
             },
 
             {
+                "id":3,
                 "title":"Room no : 301-311",
                 "roomNo":[ 
                     {
@@ -113,6 +116,7 @@
             },
 
             {
+                "id":4,
                 "title":"Room no : RD1-RD5",
                 "roomNo":[ 
                     {
@@ -149,6 +153,7 @@
             },
 
             {
+                "id":5,
                 "title":"Room no : D-1 & D-2",
                 "roomNo":[ 
                     {
@@ -169,12 +174,14 @@
 
         "individual": [
             {
+                "id":1,
                 "roomname": "Common Room",
                 "map": "../../public/assets/maps/commonRoom.svg",
                 "floor": "2nd",
                 "building": "Administrative"
             },
             {
+                "id":2,
                 "roomname": "Library Room",
                 "map": "../../public/assets/maps/libraryClassroom.svg",
                 "floor": "3rd",
@@ -279,7 +286,8 @@
                 "floor": "2nd",
                 "building": "Computer"
             }
-        ]
+        ],
+        "roomsdropdown":[]
     },
 
     {
@@ -365,7 +373,8 @@
                 "floor": "1st",
                 "building": "Administrative"
             }
-        ]
+        ],
+        "roomsdropdown":[]
     },
 
     {
@@ -374,6 +383,7 @@
         "icon":"../../public/assets/icon/officeicon.svg",
         "roomsdropdown":[
             {
+                "id":1,
                 "title":"Department Offices",
                 "roomNo":[ 
                     {
@@ -435,6 +445,7 @@
                 ]
             },
             {
+                "id":2,
                 "title":"Academic Offices",
                 "roomNo":[
                     {
@@ -506,6 +517,7 @@
                 ]
             },
             {
+                "id":3,
                 "title":"Teacher's Room",
                 "roomNo":[
                     {
@@ -570,6 +582,7 @@
         "icon":"../../public/assets/icon/washroomicon.svg",
         "roomsdropdown":[
             {
+                "id":1,
                 "title":"Administrative Building",
                 "roomNo":[
                     {
@@ -593,6 +606,7 @@
                 ]
             },
             {
+                "id":2,
                 "title":"Computer Building",
                 "roomNo":[
                     {
@@ -610,6 +624,7 @@
                 ]
             },
             {
+                "id":3,
                 "title":"RD Building",
                 "roomNo":[
                     {
@@ -626,7 +641,8 @@
                     }
                 ]
             }
-        ]
+        ],
+        "individual":[]
     },
 
     {
@@ -706,6 +722,7 @@
                 "floor": "Campus",
                 "building": "Outside"
             }            
-        ]
+        ],
+        "roomsdropdown":[]
     }
 ]
