@@ -8,6 +8,7 @@ import Navibox from './Navibox';
 import { Link, useLocation, } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { seach } from '../redux/searchSlice.js';
+import Map from './map';
 
 
 
@@ -16,6 +17,7 @@ const NavigationBox = () => {
     const [isOpen, setFocus] = useState(false);
     const [isScroll, setScroll] = useState(false);
     const [searchValue, setSerchValue] = useState('');
+    
 
     const searchText = useSelector(state => state.search.searchValue);
     const ref = useRef();
@@ -55,6 +57,10 @@ const NavigationBox = () => {
 
 
     const location = useLocation().pathname;
+    const locations = useLocation();
+    const pathName = locations.pathname.split('/')[2]?.replaceAll('-', ' ');
+
+    console.log(location)
 
 
 
@@ -113,7 +119,7 @@ const NavigationBox = () => {
                                         <div className="w-[50px] h-[50px] rounded-full  bg-[#e6eff6] p-3 ">
                                             <img className="w-full " src={data.icon} alt="" />
                                         </div>
-                                        <Link to={`/${v.roomname.replaceAll(' ', '-') }`} className="ml-0 text-left font-semibold">Room No: {v.roomname}</Link>
+                                        <Link to={`/${data.title}/${v.roomname.replaceAll(' ', '-')}`} className="ml-0 text-left font-semibold">Room No: {v.roomname}</Link>
                                     </div>
                                 </li>
                             ))}
@@ -129,7 +135,7 @@ const NavigationBox = () => {
                         <div className="w-[50px] h-[50px] rounded-full  bg-[#edf6fd] p-3 mr-3">
                             <img className="w-full" src={data.icon} alt="" />
                         </div>
-                        <Link to={`/${v.roomname.replaceAll(' ', '-')}`} className="ml-0 font-semibold">{v.roomname}</Link>
+                        <Link to={`/${data.title}/${v.roomname.replaceAll(' ', '-')}`} className="ml-0 font-semibold">{v.roomname}</Link>
                     </div>
                 ))
             )))}
@@ -138,6 +144,13 @@ const NavigationBox = () => {
             <div className='mt-5'>
                 <Accordions />
             </div>
+
+
+
+            {searchValue == '' && < Map />}
+            
+
+            
 
         </motion.div>
     );

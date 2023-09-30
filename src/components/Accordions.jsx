@@ -6,7 +6,7 @@ import {
 } from "@material-tailwind/react";
 
 import datas from '../data/data.json';
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 
@@ -37,12 +37,16 @@ export default function Accordions() {
     const location = useLocation();
     const pathName = location.pathname.replace('/', '');
 
+
+    const pathNames = location.pathname.split('/')[2]?.replaceAll('-', ' ');
+
     const handleSearch = room => {
         const roomsearchtitle = room.roomname.toUpperCase();
         if (roomsearchtitle.includes(searchValue.toUpperCase())) {
             return true;
         }
     };
+
 
     return (
         <>
@@ -71,7 +75,7 @@ export default function Accordions() {
                                                                     <div className="w-[50px] h-[50px] rounded-full  bg-[#e6eff6] p-3 ">
                                                                         <img className="w-full " src={data.icon} alt="" />
                                                                     </div>
-                                                                    <Link to={`${pathName}/${v.roomname}`} className="ml-0 text-left font-semibold">Room No: {v.roomname}</Link>
+                                                                    <Link to={`${pathName}/${v.roomname.replaceAll(' ', '-') }`} className="ml-0 text-left font-semibold">Room No: {v.roomname}</Link>
                                                                 </div>
                                                             </li>
                                                         ))}
@@ -103,7 +107,7 @@ export default function Accordions() {
                                                     <div className="w-[50px] h-[50px] rounded-full  bg-[#e6eff6] p-3 ">
                                                         <img className="w-full " src={data.icon} alt="" />
                                                     </div>
-                                                    <Link to={`${pathName}/${v.roomname}`} className="ml-0 text-left font-semibold">Room No: {v.roomname}</Link>
+                                                    <Link to={`${pathName}/${v.roomname.replaceAll(' ', '-') }`} className="ml-0 text-left font-semibold">Room No: {v.roomname}</Link>
                                                 </div>
                                             </li>
                                         ))}
