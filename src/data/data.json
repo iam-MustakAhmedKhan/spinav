@@ -2,39 +2,39 @@
     {
         "id":1,
         "title":"Classroom",
-        "icon":"./assets/icon/classicon.svg",
+        "icon":"../../public/assets/icon/classicon.svg",
         "roomsdropdown":[
             {   "id":1,
                 "title":"Room no : 1006-1012",
-                "icon": "./assets/icon/classicon.svg",
+                "icon": "../../public/assets/icon/classicon.svg",
                 "roomNo":[ 
                     {
                         "roomname":"1006",
-                        "map":"./assets/maps/1006.svg",
+                        "map":"../../public/assets/maps/1006.svg",
                         "floor":"1st",
                         "building":"Computer"
                     },
                     {
                         "roomname":"1007",
-                        "map":"./assets/maps/1007.svg",
+                        "map":"../../public/assets/maps/1007.svg",
                         "floor":"1st",
                         "building":"Computer"
                     },
                     {
                         "roomname":"1010",
-                        "map":"./assets/maps/1010.svg",
+                        "map":"../../public/assets/maps/1010.svg",
                         "floor":"1st",
                         "building":"Computer"
                     },
                     {
                         "roomname":"1011",
-                        "map":"./assets/maps/1011.svg",
+                        "map":"../../public/assets/maps/1011.svg",
                         "floor":"1st",
                         "building":"Computer"
                     },
                     {
                         "roomname":"1012",
-                        "map":"./assets/maps/1012.svg",
+                        "map":"../../public/assets/maps/1012.svg",
                         "floor":"1st",
                         "building":"Computer"
                     }
@@ -47,25 +47,25 @@
                 "roomNo":[ 
                     {
                         "roomname":"2006",
-                        "map":"./assets/maps/2006.svg",
+                        "map":"../../public/assets/maps/2006.svg",
                         "floor":"2nd",
                         "building":"Computer"
                     },
                     {
                         "roomname":"2008",
-                        "map":"./assets/maps/2008.svg",
+                        "map":"../../public/assets/maps/2008.svg",
                         "floor":"2nd",
                         "building":"Computer"
                     },
                     {
                         "roomname":"2009",
-                        "map":"./assets/maps/2009.svg",
+                        "map":"../../public/assets/maps/2009.svg",
                         "floor":"2nd",
                         "building":"Computer"
                     },
                     {
                         "roomname":"2010",
-                        "map":"./assets/maps/2010.svg",
+                        "map":"../../public/assets/maps/2010.svg",
                         "floor":"2nd",
                         "building":"Computer"
                     }
@@ -78,37 +78,37 @@
                 "roomNo":[ 
                     {
                         "roomname":"301",
-                        "map":"./assets/maps/301.svg",
+                        "map":"../../public/assets/maps/301.svg",
                         "floor":"3rd",
                         "building":"Administrative"
                     },
                     {
                         "roomname":"304",
-                        "map":"./assets/maps/304.svg",
+                        "map":"../../public/assets/maps/304.svg",
                         "floor":"3rd",
                         "building":"Administrative"
                     },
                     {
                         "roomname":"305",
-                        "map":"./assets/maps/305.svg",
+                        "map":"../../public/assets/maps/305.svg",
                         "floor":"3rd",
                         "building":"Administrative"
                     },
                     {
                         "roomname":"307",
-                        "map":"./assets/maps/307.svg",
+                        "map":"../../public/assets/maps/307.svg",
                         "floor":"3rd",
                         "building":"Administrative"
                     },
                     {
                         "roomname":"308",
-                        "map":"./assets/maps/308.svg",
+                        "map":"../../public/assets/maps/308.svg",
                         "floor":"3rd",
                         "building":"Administrative"
                     },
                     {
                         "roomname":"311",
-                        "map":"./assets/maps/311.svg",
+                        "map":"../../public/assets/maps/311.svg",
                         "floor":"3rd",
                         "building":"Administrative"
                     }
@@ -121,31 +121,31 @@
                 "roomNo":[ 
                     {
                         "roomname":"RD-1",
-                        "map":"./assets/maps/RD1.svg",
+                        "map":"../../public/assets/maps/RD1.svg",
                         "floor":"1st",
                         "building":"RD"
                     },
                     {
                         "roomname":"RD-2",
-                        "map":"./assets/maps/RD2.svg",
+                        "map":"../../public/assets/maps/RD2.svg",
                         "floor":"1st",
                         "building":"RD"
                     },
                     {
                         "roomname":"RD-3",
-                        "map":"./assets/maps/RD3.svg",
+                        "map":"../../public/assets/maps/RD3.svg",
                         "floor":"3rd",
                         "building":"RD"
                     },
                     {
                         "roomname":"RD-4",
-                        "map":"./assets/maps/RD4.svg",
+                        "map":"../../public/assets/maps/RD4.svg",
                         "floor":"3rd",
                         "building":"RD"
                     },
                     {
                         "roomname":"RD-5",
-                        "map":"./assets/maps/RD5.svg",
+                        "map":"../../public/assets/maps/RD5.svg",
                         "floor":"3rd",
                         "building":"RD"
                     }  
@@ -158,13 +158,13 @@
                 "roomNo":[ 
                     {
                         "roomname":"D-1",
-                        "map":"./assets/maps/D1.svg",
+                        "map":"../../public/assets/maps/D1.svg",
                         "floor":"3rd",
                         "building":"Administrative"
                     },
                     {
                         "roomname":"D-2",
-                        "map":"./assets/maps/D2.svg",
+                        "map":"../../public/assets/maps/D2.svg",
                         "floor":"3rd",
                         "building":"Administrative"
                     }
@@ -176,14 +176,14 @@
             {
                 "id":1,
                 "roomname": "Common Room",
-                "map": "./assets/maps/commonRoom.svg",
+                "map": "../../public/assets/maps/commonRoom.svg",
                 "floor": "2nd",
                 "building": "Administrative"
             },
             {
                 "id":2,
                 "roomname": "Library Room",
-                "map": "./assets/maps/libraryClassroom.svg",
+                "map": "../../public/assets/maps/libraryClassroom.svg",
                 "floor": "3rd",
                 "building": "Administrative"
             }
@@ -193,96 +193,96 @@
     {
         "id":2,
         "title":"Laboratory",
-        "icon":"./assets/icon/labicon.svg",
+        "icon":"../../public/assets/icon/labicon.svg",
 
         "individual":[
             {
                 "roomname": "CAD CAM Lab",
-                "map": "./assets/maps/cadCamLab.svg",
+                "map": "../../public/assets/maps/cadCamLab.svg",
                 "floor": "2nd",
                 "building": "Administrative"
             },
             {
                 "roomname": "Chemistry Lab",
-                "map": "./assets/maps/chemistryLab.svg",
+                "map": "../../public/assets/maps/chemistryLab.svg",
                 "floor": "3rd",
                 "building": "Administrative"
             },
             {
                 "roomname": "Computer Lab",
-                "map": "./assets/maps/computerLabEnt.svg",
+                "map": "../../public/assets/maps/computerLabEnt.svg",
                 "floor": "2nd",
                 "building": "Administrative"
             },
             {
                 "roomname": "EMS Lab",
-                "map": "./assets/maps/ems.svg",
+                "map": "../../public/assets/maps/ems.svg",
                 "floor": "3rd",
                 "building": "Administrative"
             },
             {
                 "roomname": "Electromedical (EMT) Lab",
-                "map": "./assets/maps/electromedicalLab.svg",
+                "map": "../../public/assets/maps/electromedicalLab.svg",
                 "floor": "2nd",
                 "building": "Computer"
             },
             {
                 "roomname": "Electronics (ENT) Lab",
-                "map": "./assets/maps/entLab.svg",
+                "map": "../../public/assets/maps/entLab.svg",
                 "floor": "2nd",
                 "building": "Administrative"
             },
             {
                 "roomname": "EPS Lab",
-                "map": "./assets/maps/eps.svg",
+                "map": "../../public/assets/maps/eps.svg",
                 "floor": "3rd",
                 "building": "Administrative"
             },
             {
                 "roomname": "EWS Lab",
-                "map": "./assets/maps/ews.svg",
+                "map": "../../public/assets/maps/ews.svg",
                 "floor": "3rd",
                 "building": "Administrative"
             },
             {
                 "roomname": "Hardware Lab (HWL)",
-                "map": "./assets/maps/HardwareLab(HWL).svg",
+                "map": "../../public/assets/maps/HardwareLab(HWL).svg",
                 "floor": "1st",
                 "building": "Computer"
             },
             {
                 "roomname": "ICT Lab",
-                "map": "./assets/maps/ictLab.svg",
+                "map": "../../public/assets/maps/ictLab.svg",
                 "floor": "2nd",
                 "building": "Computer"
             },
             {
                 "roomname": "Micro Lab",
-                "map": "./assets/maps/microLab.svg",
+                "map": "../../public/assets/maps/microLab.svg",
                 "floor": "2nd",
                 "building": "Administrative"
             },
             {
                 "roomname": "Multimedia Classroom",
-                "map": "./assets/maps/multimediaClassroom.svg",
+                "map": "../../public/assets/maps/multimediaClassroom.svg",
                 "floor": "2nd",
                 "building": "Administrative"
             },
             {
                 "roomname": "Network Lab",
-                "map": "./assets/maps/networkLab.svg",
+                "map": "../../public/assets/maps/networkLab.svg",
                 "floor": "1st",
                 "building": "Computer"
             },
             {
                 "roomname": "Physics Lab",
-                "map": "./assets/maps/physicsLab.svg",
+                "map": "../../public/assets/maps/physicsLab.svg",
                 "floor": "3rd",
                 "building": "Administrative"
             },
             {
                 "roomname": "Software Lab",
-                "map": "./assets/maps/softwareLab.svg",
+                "map": "../../public/assets/maps/softwareLab.svg",
                 "floor": "2nd",
                 "building": "Computer"
             }
@@ -293,83 +293,83 @@
     {
         "id":3,
         "title":"Workshop",
-        "icon":"./assets/icon/workshopicon.svg",
+        "icon":"../../public/assets/icon/workshopicon.svg",
         "individual":[
             {
                 "roomname": "Auto Diesel Shop",
-                "map": "./assets/maps/autoDieselShop.svg",
+                "map": "../../public/assets/maps/autoDieselShop.svg",
                 "floor": "1st",
                 "building": "Administrative"
             },
             {
                 "roomname": "Foundry Shop",
-                "map": "./assets/maps/foundryShop.svg",
+                "map": "../../public/assets/maps/foundryShop.svg",
                 "floor": "1st",
                 "building": "Administrative"
             },
             {
                 "roomname": "Heat Engiene Lab (HEL)",
-                "map": "./assets/maps/heatEngieneLab.svg",
+                "map": "../../public/assets/maps/heatEngieneLab.svg",
                 "floor": "1st",
                 "building": "Administrative"
             },
             {
                 "roomname": "Heat Treatment Lab",
-                "map": "./assets/maps/heatTreatmentLab.svg",
+                "map": "../../public/assets/maps/heatTreatmentLab.svg",
                 "floor": "1st",
                 "building": "Administrative"
             },
             {
                 "roomname": "Hydraulic Shop",
-                "map": "./assets/maps/hydraulicLab.svg",
+                "map": "../../public/assets/maps/hydraulicLab.svg",
                 "floor": "1st",
                 "building": "Administrative"
             },
             {
                 "roomname": "Machine Shop",
-                "map": "./assets/maps/machineShop.svg",
+                "map": "../../public/assets/maps/machineShop.svg",
                 "floor": "1st",
                 "building": "Administrative"
             },
             {
                 "roomname": "Metal Shop",
-                "map": "./assets/maps/metalShop.svg",
+                "map": "../../public/assets/maps/metalShop.svg",
                 "floor": "1st",
                 "building": "Administrative"
             },
             {
                 "roomname": "Plumbing Masonary Shop",
-                "map": "./assets/maps/plumbingMasonaryShop.svg",
+                "map": "../../public/assets/maps/plumbingMasonaryShop.svg",
                 "floor": "1st",
                 "building": "Administrative"
             },
             {
                 "roomname": "RA Shop",
-                "map": "./assets/maps/raShop.svg",
+                "map": "../../public/assets/maps/raShop.svg",
                 "floor": "1st",
                 "building": "Administrative"
             },
             {
                 "roomname": "Soil Shop",
-                "map": "./assets/maps/soilShop.svg",
+                "map": "../../public/assets/maps/soilShop.svg",
                 "floor": "1st",
                 "building": "Administrative"
             },
             {
                 "roomname": "Surveying Shop",
-                "map": "./assets/maps/surveyingShop.svg",
+                "map": "../../public/assets/maps/surveyingShop.svg",
                 "floor": "2nd",
                 "building": "Administrative"
             },
             {
                 "roomname": "Welding Shop",
-                "map": "./assets/maps/weldingShop.svg",
+                "map": "../../public/assets/maps/weldingShop.svg",
                 "floor": "1st",
                 "building": "Administrative"
             },
             {
                 "roomname": "Wood Shop",
-                "map": "./assets/maps/woodShop.svg",
+                "map": "../../public/assets/maps/woodShop.svg",
                 "floor": "1st",
                 "building": "Administrative"
             }
@@ -380,7 +380,7 @@
     {
         "id":4,
         "title":"Office",
-        "icon":"./assets/icon/officeicon.svg",
+        "icon":"../../public/assets/icon/officeicon.svg",
         "roomsdropdown":[
             {
                 "id":1,
@@ -388,55 +388,55 @@
                 "roomNo":[ 
                     {
                         "roomname":"Computer Technology (CST)",
-                        "map":"./assets/maps/cmtOffice.svg",
+                        "map":"../../public/assets/maps/cmtOffice.svg",
                         "floor":"1st",
                         "building":"Computer"
                     },
                     {
                         "roomname":"Civil Technology (CT)",
-                        "map":"./assets/maps/civilDept.svg",
+                        "map":"../../public/assets/maps/civilDept.svg",
                         "floor":"2nd",
                         "building":"Administrative"
                     },
                     {
                         "roomname":"Civil Technology (CT) (2nd Shift)",
-                        "map":"./assets/maps/civilDept2.svg",
+                        "map":"../../public/assets/maps/civilDept2.svg",
                         "floor":"2nd",
                         "building":"Administrative"
                     },
                     {
                         "roomname":"Electromedical Technology (EMT)",
-                        "map":"./assets/maps/emtOffice.svg",
+                        "map":"../../public/assets/maps/emtOffice.svg",
                         "floor":"2nd",
                         "building":"Computer"
                     },
                     {
                         "roomname":"Electronics Technology (ENT)",
-                        "map":"./assets/maps/electronicsDept.svg",
+                        "map":"../../public/assets/maps/electronicsDept.svg",
                         "floor":"2nd",
                         "building":"Administrative"
                     },
                     {
                         "roomname":"Electrical Technology (ET)",
-                        "map":"./assets/maps/electricalDept.svg",
+                        "map":"../../public/assets/maps/electricalDept.svg",
                         "floor":"2nd",
                         "building":"Administrative"
                     },
                     {
                         "roomname":"Mechanical Technology (MT)",
-                        "map":"./assets/maps/mechanicalDept.svg",
+                        "map":"../../public/assets/maps/mechanicalDept.svg",
                         "floor":"2nd",
                         "building":"Administrative"
                     },
                     {
                         "roomname":"Power Technology (PT)",
-                        "map":"./assets/maps/powerDept.svg",
+                        "map":"../../public/assets/maps/powerDept.svg",
                         "floor":"2nd",
                         "building":"Administrative"
                     },
                     {
                         "roomname":"Non Tech (RS)",
-                        "map":"./assets/maps/nontechDept.svg",
+                        "map":"../../public/assets/maps/nontechDept.svg",
                         "floor":"2nd",
                         "building":"Administrative"
                     }
@@ -450,67 +450,67 @@
                 "roomNo":[
                     {
                         "roomname":"Academic Section",
-                        "map":"./assets/maps/academicSection.svg",
+                        "map":"../../public/assets/maps/academicSection.svg",
                         "floor":"2nd",
                         "building":"Administrative"
                     },
                     {
                         "roomname":"Account Section",
-                        "map":"./assets/maps/accountSection.svg",
+                        "map":"../../public/assets/maps/accountSection.svg",
                         "floor":"2nd",
                         "building":"Administrative"
                     },
                     {
                         "roomname":"Cash Section",
-                        "map":"./assets/maps/cashSection.svg",
+                        "map":"../../public/assets/maps/cashSection.svg",
                         "floor":"2nd",
                         "building":"Administrative"
                     },
                     {
                         "roomname":"Exam Control Room",
-                        "map":"./assets/maps/examControlRoom.svg",
+                        "map":"../../public/assets/maps/examControlRoom.svg",
                         "floor":"2nd",
                         "building":"Administrative"
                     },
                     {
                         "roomname":"General Section",
-                        "map":"./assets/maps/generalSection.svg",
+                        "map":"../../public/assets/maps/generalSection.svg",
                         "floor":"2nd",
                         "building":"Administrative"
                     },
                     {
                         "roomname":"General Store",
-                        "map":"./assets/maps/generalStore.svg",
+                        "map":"../../public/assets/maps/generalStore.svg",
                         "floor":"1st",
                         "building":"Administrative"
                     },
                     {
                         "roomname":"Placement Cell",
-                        "map":"./assets/maps/placementCell.svg",
+                        "map":"../../public/assets/maps/placementCell.svg",
                         "floor":"2nd",
                         "building":"Administrative"
                     },
                     {
                         "roomname":"Register Room",
-                        "map":"./assets/maps/registerRoom.svg",
+                        "map":"../../public/assets/maps/registerRoom.svg",
                         "floor":"2nd",
                         "building":"Administrative"
                     },
                     {
                         "roomname":"Security Section",
-                        "map":"./assets/maps/securitySection.svg",
+                        "map":"../../public/assets/maps/securitySection.svg",
                         "floor":"2nd",
                         "building":"Administrative"
                     },
                     {
                         "roomname":"Vice Principal",
-                        "map":"./assets/maps/vicePrincipal.svg",
+                        "map":"../../public/assets/maps/vicePrincipal.svg",
                         "floor":"2nd",
                         "building":"Administrative"
                     },
                     {
                         "roomname":"RD Office",
-                        "map":"./assets/maps/rdoffice2.svg",
+                        "map":"../../public/assets/maps/rdoffice2.svg",
                         "floor":"2nd",
                         "building":"RD"
                     }
@@ -522,37 +522,37 @@
                 "roomNo":[
                     {
                         "roomname":"Electronics Technology",
-                        "map":"./assets/maps/entTeacherRoom.svg",
+                        "map":"../../public/assets/maps/entTeacherRoom.svg",
                         "floor":"2nd",
                         "building":"Administrative"
                     },
                     {
                         "roomname":"Civil Technology",
-                        "map":"./assets/maps/civilTeacherRoom.svg",
+                        "map":"../../public/assets/maps/civilTeacherRoom.svg",
                         "floor":"2nd",
                         "building":"Administrative"
                     },
                     {
                         "roomname":"Non-Tech Faculty",
-                        "map":"./assets/maps/nontehTeacherRoom.svg",
+                        "map":"../../public/assets/maps/nontehTeacherRoom.svg",
                         "floor":"2nd",
                         "building":"Administrative"
                     },
                     {
                         "roomname":"Computer Technology",
-                        "map":"./assets/maps/cmtTeachersRoom.svg",
+                        "map":"../../public/assets/maps/cmtTeachersRoom.svg",
                         "floor":"1st",
                         "building":"Computer"
                     },
                     {
                         "roomname":"Electromedical Technology",
-                        "map":"./assets/maps/teachersRoomEmt.svg",
+                        "map":"../../public/assets/maps/teachersRoomEmt.svg",
                         "floor":"2nd",
                         "building":"Administrative"
                     },
                     {
                         "roomname":"Teacher's Room 3rd Floor",
-                        "map":"./assets/maps/3teacherRoom.svg",
+                        "map":"../../public/assets/maps/3teacherRoom.svg",
                         "floor":"2nd",
                         "building":"Administrative"
                     }
@@ -563,13 +563,13 @@
         "individual":[
             {
                 "roomname":"Conference Hall",
-                "map":"./assets/maps/conferenceRoom.svg",
+                "map":"../../public/assets/maps/conferenceRoom.svg",
                 "floor":"2nd",
                 "building":"Administrative"
             },
             {
                 "roomname":"Principal Room",
-                "map":"./assets/maps/principalRoom.svg",
+                "map":"../../public/assets/maps/principalRoom.svg",
                 "floor":"2nd",
                 "building":"Administrative"
             }
@@ -579,7 +579,7 @@
     {
         "id":5,
         "title":"Washroom",
-        "icon":"./assets/icon/washroomicon.svg",
+        "icon":"../../public/assets/icon/washroomicon.svg",
         "roomsdropdown":[
             {
                 "id":1,
@@ -587,19 +587,19 @@
                 "roomNo":[
                     {
                         "roomname":"1st Floor (Administrative)",
-                        "map":"./assets/maps/adminWashroom1.svg",
+                        "map":"../../public/assets/maps/adminWashroom1.svg",
                         "floor":"1st",
                         "building":"Administrative"
                     },
                     {
                         "roomname":"2nd Floor (Administrative)",
-                        "map":"./assets/maps/adminWashroom2.svg",
+                        "map":"../../public/assets/maps/adminWashroom2.svg",
                         "floor":"2nd",
                         "building":"Administrative"
                     },
                     {
                         "roomname":"3rd Floor (Administrative)",
-                        "map":"./assets/maps/adminWashroom3.svg",
+                        "map":"../../public/assets/maps/adminWashroom3.svg",
                         "floor":"3rd",
                         "building":"Administrative"
                     }
@@ -611,13 +611,13 @@
                 "roomNo":[
                     {
                         "roomname":"1st Floor (Ladies)",
-                        "map":"./assets/maps/ladiesWashroomCmt.svg",
+                        "map":"../../public/assets/maps/ladiesWashroomCmt.svg",
                         "floor":"1st",
                         "building":"Computer"
                     },
                     {
                         "roomname":"2nd Floor (Gents)",
-                        "map":"./assets/maps/cmtWashroom2.svg",
+                        "map":"../../public/assets/maps/cmtWashroom2.svg",
                         "floor":"2nd",
                         "building":"Computer"
                     }
@@ -629,13 +629,13 @@
                 "roomNo":[
                     {
                         "roomname": "1st Floor (RD)",
-                        "map": "./assets/maps/rdWashroom1.svg",
+                        "map": "../../public/assets/maps/rdWashroom1.svg",
                         "floor": "1st",
                         "building": "RD"
                     },
                     {
                         "roomname": "3rd Floor (RD)",
-                        "map": "./assets/maps/rdWashroom3.svg",
+                        "map": "../../public/assets/maps/rdWashroom3.svg",
                         "floor": "3rd",
                         "building": "RD"
                     }
@@ -648,77 +648,77 @@
     {
         "id":6,
         "title":"Others",
-        "icon":"./assets/icon/othersicon.svg",
+        "icon":"../../public/assets/icon/othersicon.svg",
         "individual":[
             {
                 "roomname": "BTSA",
-                "map": "./assets/maps/btsc.svg",
+                "map": "../../public/assets/maps/btsc.svg",
                 "floor": "2nd",
                 "building": "Administrative"
             },
             {
                 "roomname": "BTTC",
-                "map": "./assets/maps/btttc.svg",
+                "map": "../../public/assets/maps/btttc.svg",
                 "floor": "2nd",
                 "building": "Administrative"
             },
             {
                 "roomname": "BPTA Indoor",
-                "map": "./assets/maps/bpta.svg",
+                "map": "../../public/assets/maps/bpta.svg",
                 "floor": "2nd",
                 "building": "Administrative"
             },
             {
                 "roomname": "Bakachap",
-                "map": "./assets/maps/bakachap.svg",
+                "map": "../../public/assets/maps/bakachap.svg",
                 "floor": "3rd",
                 "building": "Administrative"
             },
             {
                 "roomname": "Canteen",
-                "map": "./assets/maps/canteen.svg",
+                "map": "../../public/assets/maps/canteen.svg",
                 "floor": "0",
                 "building": "NULL"
             },
             {
                 "roomname": "Cycle Stand",
-                "map": "./assets/maps/cycleStand.svg",
+                "map": "../../public/assets/maps/cycleStand.svg",
                 "floor": "Campus",
                 "building": "Outside"
             },
             {
                 "roomname": "Girls Common Room",
-                "map": "./assets/maps/girlsCommonRoom.svg",
+                "map": "../../public/assets/maps/girlsCommonRoom.svg",
                 "floor": "2nd",
                 "building": "Administrative"
             },
             {
                 "roomname": "Medical Center",
-                "map": "./assets/maps/medicalCenter.svg",
+                "map": "../../public/assets/maps/medicalCenter.svg",
                 "floor": "2nd",
                 "building": "Administrative"
             },
             {
                 "roomname": "Library",
-                "map": "./assets/maps/library.svg",
+                "map": "../../public/assets/maps/library.svg",
                 "floor": "3rd",
                 "building": "Administrative"
             },
             {
                 "roomname": "Mosque",
-                "map": "./assets/maps/mosque.svg",
+                "map": "../../public/assets/maps/mosque.svg",
                 "floor": "Campus",
                 "building": "Outside"
             },
             {
                 "roomname": "Parking",
-                "map": "./assets/maps/parking.svg",
+                "map": "../../public/assets/maps/parking.svg",
                 "floor": "Campus",
                 "building": "Outside"
             }, 
             {
                 "roomname": "Surma Hall",
-                "map": "./assets/maps/surmaHall.svg",
+                "map": "../../public/assets/maps/surmaHall.svg",
                 "floor": "Campus",
                 "building": "Outside"
             }            
