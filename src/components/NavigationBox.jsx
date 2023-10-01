@@ -62,8 +62,8 @@ const NavigationBox = () => {
 
 
     const location = useLocation().pathname;
-    const locations = useLocation();
-    const pathName = locations.pathname.split('/')[2]?.replaceAll('-', ' ');
+    // const locations = useLocation();
+    // const pathName = locations.pathname.split('/')[2]?.replaceAll('-', ' ');
 
     console.log(isClick);
 
@@ -80,11 +80,12 @@ const NavigationBox = () => {
         <motion.div initial={false}
             animate={isScroll || isOpen || location !== '/' ? "open" : "closed"}
             variants={variants}
+            layout
             className={`absolute divclass bg-[#EDF6FD] h-[50%] w-full bottom-0 rounded-t-[26px] p-5  scrollbarHide`}
             {...swipeHandler}
         >
 
-            <motion.div className="searchBox">
+            <div className="searchBox">
                 <div className='mx-auto'>
                     {isOpen || isScroll ? '' : <div className='w-[4rem] h-[6px] rounded-md mx-auto bg-[#051B29]/[0.2] mb-3 mt-[-8px]'></div>}
                     <div className="relative rounded-full flex items-center w-full h-12 bg-[#E6EFF6] overflow-hidden">
@@ -108,7 +109,7 @@ const NavigationBox = () => {
                         </div>
                     </div>
                 </div>
-            </motion.div>
+            </div>
 
 
             {searchText == '' && <div className={`navigationBoxes grid grid-cols-2 gap-5 items-center justify-between mt-5 pb-10 ${location != '/' ? 'hidden' : ""}`}>
