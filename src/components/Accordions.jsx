@@ -6,7 +6,7 @@ import {
 } from "@material-tailwind/react";
 
 import datas from '../data/data.json';
-import { Link, useLocation, useParams } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 
@@ -26,7 +26,7 @@ function Icon({ id, open }) {
     );
 }
 
-export default function Accordions() {
+ function Accordions() {
     const [open, setOpen] = React.useState(0);
     const searchValue = useSelector(state => state.search.searchValue);
 
@@ -38,7 +38,7 @@ export default function Accordions() {
     const pathName = location.pathname.replace('/', '');
 
 
-    const pathNames = location.pathname.split('/')[2]?.replaceAll('-', ' ');
+    // const pathNames = location.pathname.split('/')[2]?.replaceAll('-', ' ');
 
     const handleSearch = room => {
         const roomsearchtitle = room.roomname.toUpperCase();
@@ -53,12 +53,12 @@ export default function Accordions() {
             {datas.map((data, i) => {
                 if (data?.title == pathName) {
                     return (
-                        <div key={i}>
+                        <div key={i} >
                             {
                                 searchValue == '' && (
                                     data.roomsdropdown.map((room, index) => (
                                         <div key={index}>
-                                            <Accordion className="bg-[#E6EFF6] px-2 rounded-[12px] gap-y-2 py-2 mb-2 mt-2" open={open === room.id || searchValue == true} icon={<Icon id={room.id} open={open} />}>
+                                            <Accordion className="bg-[#E6EFF6] px-2 rounded-[12px] gap-y-2 py-2 mb-2 mt-2 " open={open === room.id || searchValue == true} icon={<Icon id={room.id} open={open} />}>
                                                 <AccordionHeader onClick={() => handleOpen(room.id)}>
                                                     <div className="bg-[#E6EFF6] flex items-center px-2 rounded-[12px] gap-y-2 mb-2 mt-2 Accodionbtn">
                                                         <div className="w-[50px] h-[50px] rounded-full  bg-[#edf6fd] p-3 mr-3">
@@ -68,7 +68,7 @@ export default function Accordions() {
                                                     </div>
                                                 </AccordionHeader>
                                                 <AccordionBody>
-                                                    <ul className="flex flex-col gap-y-1 mt-0">
+                                                    <ul className="flex flex-col gap-y-1 mt-0 ">
                                                         {room.roomNo.map((v, i) => (
                                                             <Link key={i} to={`${pathName}/${v.roomname.replaceAll(' ', '-')}`}>
                                                                 <li className=" p-3 first:rounded-t-[6px] last:rounded-b-[6px] bg-[#edf6fd]">
@@ -144,3 +144,5 @@ export default function Accordions() {
         </>
     );
 }
+
+export default Accordions

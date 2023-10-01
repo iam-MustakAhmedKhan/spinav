@@ -28,20 +28,20 @@ const Map = () => {
                     if (data.roomname==pathName) {
                         return (
                             <div key={i}>
-                                <div className="mapsDiv w-5/5 h-[500px] overflow-auto border border-[#0076BE] mx-auto rounded-md" >
+                                <div className="mapsDiv w-5/5 h-[70vh] overflow-auto border border-[#0076BE] mx-auto rounded-md" >
 
-                                    <MapInteractionCSS  value={zoom.value}   onChange={(value) => setZoom({ value }) }>
+                                    <MapInteractionCSS value={zoom.value}   onChange={(value) => setZoom({ value }) }>
                                         {/* <img src="path/to/thing.png" /> */}
                                             <img className="w-full" src={data.map} alt="" />
                                     </MapInteractionCSS>
                                 </div>
 
-                                {data.map !== '' ? <div className="flex text-black items-center text-center mt-9">
+                                {data.map !== '' ? <div className="flex flex-wrap text-black items-center text-center mt-9">
                                     <p>{data.building} </p>
                                     <FaChevronRight />
                                     <p>{data.floor} </p>
                                     <FaChevronRight />
-                                    <p>Room No : {data.roomname}</p>
+                                    <p>{typeof data.roomname == 'number'?'Room No : ':''} {data.roomname}</p>
                                 </div> : <div className="text-black">No Map Found !</div>}
                             </div>
                         )

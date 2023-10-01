@@ -1,133 +1,133 @@
 [
     {
-        "roomname": "1006",
+        "roomname": 1006,
         "map": "/assets/maps/1006.svg",
         "floor": "1st",
         "building": "Computer"
     },
     {
-        "roomname": "1007",
+        "roomname": 1007,
         "map": "/assets/maps/1007.svg",
         "floor": "1st",
         "building": "Computer"
     },
     {
-        "roomname": "1010",
+        "roomname": 1010,
         "map": "/assets/maps/1010.svg",
         "floor": "1st",
         "building": "Computer"
     },
     {
-        "roomname": "1011",
+        "roomname": 1011,
         "map": "/assets/maps/1011.svg",
         "floor": "1st",
         "building": "Computer"
     },
     {
-        "roomname": "1012",
+        "roomname": 1012,
         "map": "/assets/maps/1012.svg",
         "floor": "1st",
         "building": "Computer"
     },
     {
-        "roomname": "2006",
+        "roomname": 2006,
         "map": "/assets/maps/2006.svg",
         "floor": "2nd",
         "building": "Computer"
     },
     {
-        "roomname": "2008",
+        "roomname": 2008,
         "map": "/assets/maps/2008.svg",
         "floor": "2nd",
         "building": "Computer"
     },
     {
-        "roomname": "2009",
+        "roomname": 2009,
         "map": "/assets/maps/2009.svg",
         "floor": "2nd",
         "building": "Computer"
     },
     {
-        "roomname": "2010",
+        "roomname": 2010,
         "map": "/assets/maps/2010.svg",
         "floor": "2nd",
         "building": "Computer"
     },
     {
-        "roomname": "301",
+        "roomname": 301,
         "map": "/assets/maps/301.svg",
         "floor": "3rd",
         "building": "Administrative"
     },
     {
-        "roomname": "304",
+        "roomname": 304,
         "map": "/assets/maps/304.svg",
         "floor": "3rd",
         "building": "Administrative"
     },
     {
-        "roomname": "305",
+        "roomname": 305,
         "map": "/assets/maps/305.svg",
         "floor": "3rd",
         "building": "Administrative"
     },
     {
-        "roomname": "307",
+        "roomname": 307,
         "map": "/assets/maps/307.svg",
         "floor": "3rd",
         "building": "Administrative"
     },
     {
-        "roomname": "308",
+        "roomname": 308,
         "map": "/assets/maps/308.svg",
         "floor": "3rd",
         "building": "Administrative"
     },
     {
-        "roomname": "311",
+        "roomname": 311,
         "map": "/assets/maps/311.svg",
         "floor": "3rd",
         "building": "Administrative"
     },
     {
         "roomname": "RD 1",
-        "map": "/assets/maps/RD1.svg",
+        "map": "/assets/maps/rd1.svg",
         "floor": "1st",
         "building": "RD"
     },
     {
         "roomname": "RD 2",
-        "map": "/assets/maps/RD2.svg",
+        "map": "/assets/maps/rd2.svg",
         "floor": "1st",
         "building": "RD"
     },
     {
         "roomname": "RD 3",
-        "map": "/assets/maps/RD3.svg",
+        "map": "/assets/maps/rd3.svg",
         "floor": "3rd",
         "building": "RD"
     },
     {
         "roomname": "RD 4",
-        "map": "/assets/maps/RD4.svg",
+        "map": "/assets/maps/rd4.svg",
         "floor": "3rd",
         "building": "RD"
     },
     {
         "roomname": "RD 5",
-        "map": "/assets/maps/RD5.svg",
+        "map": "/assets/maps/rd5.svg",
         "floor": "3rd",
         "building": "RD"
     },
     {
         "roomname": "D 1",
-        "map": "/assets/maps/D1.svg",
+        "map": "/assets/maps/d1.svg",
         "floor": "3rd",
         "building": "Administrative"
     },
     {
         "roomname": "D 2",
-        "map": "/assets/maps/D2.svg",
+        "map": "/assets/maps/d2.svg",
         "floor": "3rd",
         "building": "Administrative"
     },
@@ -446,7 +446,7 @@
         "building": "Administrative"
     },
     {
-        "roomname": "Non-Tech Faculty",
+        "roomname": "Non Tech Faculty",
         "map": "/assets/maps/nontehTeacherRoom.svg",
         "floor": "2nd",
         "building": "Administrative"
@@ -524,7 +524,7 @@
         "building": "RD"
     },
     {
-        "roomname": "BTSA",
+        "roomname": "BTSC",
         "map": "/assets/maps/btsc.svg",
         "floor": "2nd",
         "building": "Administrative"
@@ -549,13 +549,13 @@
     },
     {
         "roomname": "Canteen",
-        "map": "/assets/maps/canteen.svg",
+        "map": "",
         "floor": "0",
         "building": "NULL"
     },
     {
         "roomname": "Cycle Stand",
-        "map": "/assets/maps/cycleStand.svg",
+        "map": "",
         "floor": "Campus",
         "building": "Outside"
     },
@@ -579,7 +579,7 @@
     },
     {
         "roomname": "Mosque",
-        "map": "/assets/maps/mosque.svg",
+        "map": "",
         "floor": "Campus",
         "building": "Outside"
     },
