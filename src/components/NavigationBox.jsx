@@ -29,7 +29,7 @@ const NavigationBox = () => {
     const locations = useLocation();
     const pathName = locations.pathname.split('/')[1]?.replaceAll('-', ' ');
 
-    const navigate=useNavigate()
+    const navigate = useNavigate();
 
     const variants = {
         open: { height: '100%', borderRadius: '0' },
@@ -40,9 +40,9 @@ const NavigationBox = () => {
         setFocus(v);
         setScroll(v);
         ref.current.blur();
-        setSerchValue('')
-     
-        navigate('/')
+        setSerchValue('');
+
+        navigate('/');
     };
 
     useEffect(() => {
@@ -77,7 +77,7 @@ const NavigationBox = () => {
         setFocus(v);
     };
 
-    console.log(pathName)
+    console.log(pathName);
 
 
 
@@ -90,10 +90,10 @@ const NavigationBox = () => {
             {...swipeHandler}
         >
 
-                    {isOpen || isScroll || pathName !=='' ? '' : <div className='w-[4rem] h-[6px] rounded-md mx-auto bg-[#051B29]/[0.2] mb-0 mt-2'></div>}
+            {isOpen || isScroll || pathName !== '' ? '' : <div className='w-[4rem] h-[6px] rounded-md mx-auto bg-[#051B29]/[0.2] mb-0 mt-2'></div>}
             <div className="searchBox fixed bg-[#EDF6FD] z-30 py-2" style={{ width: `calc(100% - 40px)` }}>
                 <div className='mx-auto'>
-                    <div className={`relative ${isOpen || isScroll || pathName !== '' ?'mt-2':''} rounded-full flex items-center w-full h-12 bg-[#E6EFF6] overflow-hidden`}>
+                    <div className={`relative ${isOpen || isScroll || pathName !== '' ? 'mt-2' : ''} rounded-full flex items-center w-full h-12 bg-[#E6EFF6] overflow-hidden`}>
                         {isOpen || isScroll || pathName !== '' ? <button className='text-2xl font-bold ml-2 text-[#051B29]/[0.5]' onClick={() => handleFocus(false)}> <FaChevronLeft /> </button> : ""}
                         <input
                             className="peer h-full w-full outline-none text-sm text-gray-700 pr-2 bg-[#e6eff6] px-4 font-bold"
@@ -126,7 +126,7 @@ const NavigationBox = () => {
 
             </div>} */}
 
-            {searchText == '' && location == '/' && <div className={`navigationBoxes grid grid-cols-2 gap-5 items-center  justify-between ${isOpen || isScroll ? 'mt-[5rem]' :'mt-[4.5rem]'} pb-10 `}>
+            {searchText == '' && location == '/' && <div className={`navigationBoxes grid grid-cols-2 gap-5 items-center  justify-between ${isOpen || isScroll ? 'mt-[5rem]' : 'mt-[4.5rem]'} pb-10 `}>
 
                 {datas.map(data => (
                     <Navibox data={data} key={data.id} />
@@ -149,7 +149,7 @@ const NavigationBox = () => {
                                                 <div className="w-[50px] h-[50px] rounded-full  bg-[#edf6fd] p-3 ">
                                                     <img className="w-full " src={data.icon} alt="" />
                                                 </div>
-                                                <p className="ml-0 text-left font-semibold">Room No: {v.roomname}</p>
+                                                <p className="ml-0 text-left font-semibold">{v.roomname}</p>
                                             </div>
                                         </li>
                                     </Link>
