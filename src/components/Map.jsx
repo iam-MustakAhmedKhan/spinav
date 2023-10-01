@@ -1,6 +1,6 @@
 import { FaChevronRight } from "react-icons/fa";
 import { useLocation } from "react-router-dom";
-import datas from '../data/map.json';
+import datas from '../data/mapArray.json';
 import { MapInteractionCSS } from 'react-map-interaction';
 import { useState } from "react";
 
