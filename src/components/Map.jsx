@@ -23,7 +23,7 @@ const Map = () => {
     return (
         <>
 
-            <div className='mx-auto z-20 text-white font-bold '>
+            <div className='mx-auto z-20 text-white font-bold'>
                 {datas.map((data, i) => {
                     if (data.roomname==pathName) {
                         return (
