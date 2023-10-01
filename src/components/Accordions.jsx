@@ -77,7 +77,7 @@ function Icon({ id, open }) {
                                                                         <div className="w-[50px] h-[50px] rounded-full  bg-[#e6eff6] p-3 ">
                                                                             <img className="w-full " src={data.icon} alt="" />
                                                                         </div>
-                                                                        <p className="ml-0 text-left font-semibold">Room No: {v.roomname}</p>
+                                                                        <p className="ml-0 text-left font-semibold">{v.roomname}</p>
                                                                     </div>
                                                                 </li>
                                                             </Link>
@@ -113,7 +113,7 @@ function Icon({ id, open }) {
                                                         <div className="w-[50px] h-[50px] rounded-full  bg-[#e6eff6] p-3 ">
                                                             <img className="w-full " src={data.icon} alt="" />
                                                         </div>
-                                                        <p className="ml-0 text-left font-semibold">Room No: {v.roomname}</p>
+                                                        <p className="ml-0 text-left font-semibold">{v.roomname}</p>
                                                     </div>
                                                 </li>
                                             </Link>
