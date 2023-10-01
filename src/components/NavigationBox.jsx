@@ -17,7 +17,8 @@ const NavigationBox = () => {
     const [isOpen, setFocus] = useState(false);
     const [isScroll, setScroll] = useState(false);
     const [searchValue, setSerchValue] = useState('');
-    
+    const [isClick, setClick] = useState('');
+
 
     const searchText = useSelector(state => state.search.searchValue);
     const ref = useRef();
@@ -54,14 +55,24 @@ const NavigationBox = () => {
             return true;
         }
     };
+    const onSearchHandle = (e) => {
+        setSerchValue(e.target.value)
+        setClick('')
+    }
 
 
     const location = useLocation().pathname;
     const locations = useLocation();
     const pathName = locations.pathname.split('/')[2]?.replaceAll('-', ' ');
 
-    console.log(location)
+    console.log(isClick);
 
+
+    const onClickHandler = (v) => {
+        setClick(v);
+        setSerchValue('')
+
+    };
 
 
 
@@ -88,7 +99,7 @@ const NavigationBox = () => {
                             autoComplete='off'
                             ref={ref}
                             autoFocus={false}
-                            onChange={(e) => setSerchValue(e.target.value)}
+                            onChange={(e) => onSearchHandle(e)}
                         />
                         <div className="grid place-items-center h-full w-12  text-[#051B29]/[0.5] me-2">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -112,16 +123,19 @@ const NavigationBox = () => {
             {searchValue !== '' && (
                 datas.map(data => (
                     data.roomsdropdown.map((room, index) => (
-                        <ul key={index} className="flex flex-col gap-y-1 mt-0">
+                        <ul key={index} className={`${isClick ? "hidden" : 'flex'} flex-col gap-y-1 mt-0`}>
                             {room.roomNo.filter(handleSearch).map((v, i) => (
-                                <li key={i} className=" p-3 first:rounded-t-[6px] last:rounded-b-[6px] bg-[#edf6fd]">
-                                    <div className="flex items-center gap-3">
-                                        <div className="w-[50px] h-[50px] rounded-full  bg-[#e6eff6] p-3 ">
-                                            <img className="w-full " src={data.icon} alt="" />
+                                <Link key={i} onClick={() => onClickHandler(v.roomname)} to={`/${data.title}/${v.roomname.replaceAll(' ', '-')}`}>
+                                
+                                    <li className=" p-3 first:rounded-t-[6px] last:rounded-b-[6px] bg-[#edf6fd]">
+                                        <div className="flex items-center gap-3">
+                                            <div className="w-[50px] h-[50px] rounded-full  bg-[#e6eff6] p-3 ">
+                                                <img className="w-full " src={data.icon} alt="" />
+                                            </div>
+                                            <p  className="ml-0 text-left font-semibold">Room No: {v.roomname}</p>
                                         </div>
-                                        <Link to={`/${data.title}/${v.roomname.replaceAll(' ', '-')}`} className="ml-0 text-left font-semibold">Room No: {v.roomname}</Link>
-                                    </div>
-                                </li>
+                                    </li>
+                                </Link>
                             ))}
                         </ul>
                     ))
@@ -131,12 +145,14 @@ const NavigationBox = () => {
 
             {searchValue !== '' && (datas.map(data => (
                 data.individual.filter(handleSearch).map((v, i) => (
-                    <div key={i} className="bg-[#E6EFF6] flex items-center px-2 py-2 rounded-[12px] gap-y-2 mb-2 mt-2">
-                        <div className="w-[50px] h-[50px] rounded-full  bg-[#edf6fd] p-3 mr-3">
-                            <img className="w-full" src={data.icon} alt="" />
+                    <Link key={i} to={`/${data.title}/${v.roomname.replaceAll(' ', '-')}`} onClick={() => onClickHandler(v.roomname)} >
+                        <div className={`bg-[#E6EFF6] ${isClick ? "hidden" : 'flex'} items-center px-2 py-2 rounded-[12px] gap-y-2 mb-2 mt-2`}>
+                            <div className="w-[50px] h-[50px] rounded-full  bg-[#edf6fd] p-3 mr-3">
+                                <img className="w-full" src={data.icon} alt="" />
+                            </div>
+                            <p  className="ml-0 font-semibold">{v.roomname}</p>
                         </div>
-                        <Link to={`/${data.title}/${v.roomname.replaceAll(' ', '-')}`} className="ml-0 font-semibold">{v.roomname}</Link>
-                    </div>
+                    </Link>
                 ))
             )))}
 
@@ -148,9 +164,9 @@ const NavigationBox = () => {
 
 
             {searchValue == '' && < Map />}
-            
 
-            
+
+
 
         </motion.div>
     );

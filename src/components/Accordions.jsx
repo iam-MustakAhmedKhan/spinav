@@ -58,7 +58,7 @@ export default function Accordions() {
                                 searchValue == '' && (
                                     data.roomsdropdown.map((room, index) => (
                                         <div key={index}>
-                                            <Accordion className="bg-[#E6EFF6] px-2 rounded-[12px] gap-y-2 py-2 mb-2 mt-2" open={open === room.id || searchValue==true} icon={<Icon id={room.id} open={open} />}>
+                                            <Accordion className="bg-[#E6EFF6] px-2 rounded-[12px] gap-y-2 py-2 mb-2 mt-2" open={open === room.id || searchValue == true} icon={<Icon id={room.id} open={open} />}>
                                                 <AccordionHeader onClick={() => handleOpen(room.id)}>
                                                     <div className="bg-[#E6EFF6] flex items-center px-2 rounded-[12px] gap-y-2 mb-2 mt-2 Accodionbtn">
                                                         <div className="w-[50px] h-[50px] rounded-full  bg-[#edf6fd] p-3 mr-3">
@@ -70,14 +70,16 @@ export default function Accordions() {
                                                 <AccordionBody>
                                                     <ul className="flex flex-col gap-y-1 mt-0">
                                                         {room.roomNo.map((v, i) => (
-                                                            <li key={i} className=" p-3 first:rounded-t-[6px] last:rounded-b-[6px] bg-[#edf6fd]">
-                                                                <div className="flex items-center gap-3">
-                                                                    <div className="w-[50px] h-[50px] rounded-full  bg-[#e6eff6] p-3 ">
-                                                                        <img className="w-full " src={data.icon} alt="" />
+                                                            <Link key={i} to={`${pathName}/${v.roomname.replaceAll(' ', '-')}`}>
+                                                                <li className=" p-3 first:rounded-t-[6px] last:rounded-b-[6px] bg-[#edf6fd]">
+                                                                    <div className="flex items-center gap-3">
+                                                                        <div className="w-[50px] h-[50px] rounded-full  bg-[#e6eff6] p-3 ">
+                                                                            <img className="w-full " src={data.icon} alt="" />
+                                                                        </div>
+                                                                        <p className="ml-0 text-left font-semibold">Room No: {v.roomname}</p>
                                                                     </div>
-                                                                    <Link to={`${pathName}/${v.roomname.replaceAll(' ', '-') }`} className="ml-0 text-left font-semibold">Room No: {v.roomname}</Link>
-                                                                </div>
-                                                            </li>
+                                                                </li>
+                                                            </Link>
                                                         ))}
                                                     </ul>
                                                 </AccordionBody>
@@ -89,12 +91,14 @@ export default function Accordions() {
                             }
 
                             {searchValue == '' && (data.individual.map((v, i) => (
-                                <div key={i} className="bg-[#E6EFF6] flex items-center px-2 py-2 rounded-[12px] gap-y-2 mb-2 mt-2">
-                                    <div className="w-[50px] h-[50px] rounded-full  bg-[#edf6fd] p-3 mr-3">
-                                        <img className="w-full" src={data.icon} alt="" />
+                                <Link key={i} to={`${pathName}/${v.roomname.replaceAll(' ', '-')}`} >
+                                    <div className="bg-[#E6EFF6] flex items-center px-2 py-2 rounded-[12px] gap-y-2 mb-2 mt-2">
+                                        <div className="w-[50px] h-[50px] rounded-full  bg-[#edf6fd] p-3 mr-3">
+                                            <img className="w-full" src={data.icon} alt="" />
+                                        </div>
+                                        <p className="ml-0 font-semibold">{v.roomname}</p>
                                     </div>
-                                    <Link to={`${pathName}/${v.roomname.replaceAll(' ', '-')}`} className="ml-0 font-semibold">{v.roomname}</Link>
-                                </div>
+                                </Link>
                             )))}
 
 
@@ -102,14 +106,16 @@ export default function Accordions() {
                                 data.roomsdropdown.map((room, index) => (
                                     <ul key={index} className="flex flex-col gap-y-1 mt-0">
                                         {room.roomNo.filter(handleSearch).map((v, i) => (
-                                            <li key={i} className=" p-3 first:rounded-t-[6px] last:rounded-b-[6px] bg-[#edf6fd]">
-                                                <div className="flex items-center gap-3">
-                                                    <div className="w-[50px] h-[50px] rounded-full  bg-[#e6eff6] p-3 ">
-                                                        <img className="w-full " src={data.icon} alt="" />
+                                            <Link key={i} to={`${pathName}/${v.roomname.replaceAll(' ', '-')}`}>
+                                                <li className=" p-3 first:rounded-t-[6px] last:rounded-b-[6px] bg-[#edf6fd]">
+                                                    <div className="flex items-center gap-3">
+                                                        <div className="w-[50px] h-[50px] rounded-full  bg-[#e6eff6] p-3 ">
+                                                            <img className="w-full " src={data.icon} alt="" />
+                                                        </div>
+                                                        <p className="ml-0 text-left font-semibold">Room No: {v.roomname}</p>
                                                     </div>
-                                                    <Link to={`${pathName}/${v.roomname.replaceAll(' ', '-') }`} className="ml-0 text-left font-semibold">Room No: {v.roomname}</Link>
-                                                </div>
-                                            </li>
+                                                </li>
+                                            </Link>
                                         ))}
                                     </ul>
                                 ))
@@ -117,15 +123,17 @@ export default function Accordions() {
                             }
 
                             {searchValue !== '' && (data.individual.filter(handleSearch).map((v, i) => (
-                                <div key={i} className="bg-[#E6EFF6] flex items-center px-2 py-2 rounded-[12px] gap-y-2 mb-2 mt-2">
-                                    <div className="w-[50px] h-[50px] rounded-full  bg-[#edf6fd] p-3 mr-3">
-                                        <img className="w-full" src={data.icon} alt="" />
+                                <Link key={i} to={`${pathName}/${v.roomname.replaceAll(' ', '-')}`}>
+                                    <div className="bg-[#E6EFF6] flex items-center px-2 py-2 rounded-[12px] gap-y-2 mb-2 mt-2">
+                                        <div className="w-[50px] h-[50px] rounded-full  bg-[#edf6fd] p-3 mr-3">
+                                            <img className="w-full" src={data.icon} alt="" />
+                                        </div>
+                                        <p className="ml-0 font-semibold">{v.roomname}</p>
                                     </div>
-                                    <Link to={`${pathName}/${v.roomname.replaceAll(' ', '-')}`} className="ml-0 font-semibold">{v.roomname}</Link>
-                                </div>
+                                </Link>
                             )))}
 
-                    
+
                         </div>
                     );
                 }
