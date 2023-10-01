@@ -37,9 +37,9 @@ const Map = () => {
                                 </div>
 
                                 {data.map !== '' ? <div className="flex flex-wrap text-black items-center text-center mt-9">
-                                    <p>{data.building} </p>
+                                    <p>{data.building} Bulding </p>
                                     <FaChevronRight />
-                                    <p>{data.floor} </p>
+                                    <p>{data.floor} Floor</p>
                                     <FaChevronRight />
                                     <p>{data.roomname}</p>
                                 </div> : <div className="text-black">No Map Found !</div>}
