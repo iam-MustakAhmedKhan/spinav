@@ -68,11 +68,6 @@ const NavigationBox = () => {
         setClick('');
     };
 
-
-
-
-
-
     const onClickHandler = (v) => {
         setClick(v);
         setSerchValue('');
@@ -123,7 +118,15 @@ const NavigationBox = () => {
             </div>
 
 
-            {searchText == '' && <div className={`navigationBoxes grid grid-cols-2 gap-5 items-center  justify-between mt-[4.5rem] pb-10 ${location != '/' ? 'hidden' : ""}`}>
+            {/* {searchText == '' && <div className={`navigationBoxes grid grid-cols-2 gap-5 items-center  justify-between mt-[4.5rem] pb-10 ${location != '/' ? 'hidden' : ""}`}>
+
+                {datas.map(data => (
+                    <Navibox data={data} key={data.id} />
+                ))}
+
+            </div>} */}
+
+            {searchText == '' && location == '/' && <div className={`navigationBoxes grid grid-cols-2 gap-5 items-center  justify-between mt-[4.5rem] pb-10 `}>
 
                 {datas.map(data => (
                     <Navibox data={data} key={data.id} />
@@ -132,17 +135,18 @@ const NavigationBox = () => {
             </div>}
 
 
-            <div className='mt-[6rem]'>
+
+            <div className='mt-[5rem]'>
                 {searchValue !== '' && (
                     datas.map(data => (
                         data.roomsdropdown.map((room, index) => (
-                            <ul key={index} className={`${isClick ? "hidden" : 'flex'} flex-col gap-y-1 mt-0`}>
+                            <ul key={index} className={`${isClick ? "hidden" : 'flex'} flex-col gap-y-1 mt-0 mb-1`}>
                                 {room.roomNo.filter(handleSearch).map((v, i) => (
                                     <Link key={i} onClick={() => onClickHandler(v.roomname)} to={`/${data.title}/${v.roomname.replaceAll(' ', '-')}`}>
 
-                                        <li className=" p-3 first:rounded-t-[6px] last:rounded-b-[6px] bg-[#edf6fd]">
+                                        <li className=" p-3 first:rounded-t-[6px] last:rounded-b-[6px] bg-[#E6EFF6] mb">
                                             <div className="flex items-center gap-3">
-                                                <div className="w-[50px] h-[50px] rounded-full  bg-[#e6eff6] p-3 ">
+                                                <div className="w-[50px] h-[50px] rounded-full  bg-[#edf6fd] p-3 ">
                                                     <img className="w-full " src={data.icon} alt="" />
                                                 </div>
                                                 <p className="ml-0 text-left font-semibold">Room No: {v.roomname}</p>

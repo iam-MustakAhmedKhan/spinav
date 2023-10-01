@@ -28,7 +28,7 @@ const Map = () => {
                     if (data.roomname==pathName) {
                         return (
                             <div key={i}>
-                                <div className="mapsDiv w-5/5 h-[70vh] overflow-auto border border-[#0076BE] mx-auto rounded-md" >
+                                <div className="mapsDiv w-5/5 h-[65vh] overflow-auto border border-[#0076BE] mx-auto rounded-md" >
 
                                     <MapInteractionCSS value={zoom.value}   onChange={(value) => setZoom({ value }) }>
                                         {/* <img src="path/to/thing.png" /> */}
