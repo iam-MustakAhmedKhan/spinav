@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { motion } from "framer-motion";
 import { FaChevronLeft } from 'react-icons/fa';
 import { useSwipeable } from 'react-swipeable';
@@ -24,12 +24,8 @@ const NavigationBox = () => {
     const ref = useRef();
 
     const dispatch = useDispatch();
+    const navigate= useNavigate()
 
-    const location = useLocation().pathname;
-    const locations = useLocation();
-    const pathName = locations.pathname.split('/')[1]?.replaceAll('-', ' ');
-
-    const navigate=useNavigate()
 
     const variants = {
         open: { height: '100%', borderRadius: '0' },
@@ -41,7 +37,6 @@ const NavigationBox = () => {
         setScroll(v);
         ref.current.blur();
         setSerchValue('')
-     
         navigate('/')
     };
 
@@ -52,7 +47,7 @@ const NavigationBox = () => {
 
     const swipeHandler = useSwipeable({
         onSwipedUp: () => setScroll(true),
-        onSwipedDown: () => !pathName && handleFocus(false)
+        onSwipedDown: () => handleFocus(false)
 
     });
 
@@ -69,8 +64,11 @@ const NavigationBox = () => {
     };
 
 
+    const location = useLocation().pathname;
+    const locations = useLocation();
+    const pathName = locations.pathname.split('/')[1]?.replaceAll('-', ' ');
 
-
+    console.log(isClick);
 
 
     const onClickHandler = (v) => {
@@ -78,35 +76,30 @@ const NavigationBox = () => {
         setSerchValue('');
 
     };
-    const setFocusHandler = (v) => {
-        setFocus(v);
-    };
-
-    console.log(pathName)
 
 
 
     return (
-        <motion.div initial={{ height: '50%' }}
+        <motion.div initial={false}
             animate={isScroll || isOpen || location !== '/' ? "open" : "closed"}
             variants={variants}
             layout
-            className={`absolute divclass bg-[#EDF6FD] h-[50%] w-full ${pathName ? 'overflow-y-auto' : ''} bottom-0 rounded-t-[26px] p-5 pt-0   scrollbarHide`}
+            className={`absolute divclass bg-[#EDF6FD] h-[50%] w-full bottom-0 rounded-t-[26px] p-5  scrollbarHide`}
             {...swipeHandler}
         >
 
-                    {isOpen || isScroll || pathName !=='' ? '' : <div className='w-[4rem] h-[6px] rounded-md mx-auto bg-[#051B29]/[0.2] mb-0 mt-2'></div>}
-            <div className="searchBox fixed bg-[#EDF6FD] z-30 py-2" style={{ width: `calc(100% - 40px)` }}>
+            <div className="searchBox">
                 <div className='mx-auto'>
-                    <div className={`relative ${isOpen || isScroll || pathName !== '' ?'mt-2':''} rounded-full flex items-center w-full h-12 bg-[#E6EFF6] overflow-hidden`}>
-                        {isOpen || isScroll || pathName !== '' ? <button className='text-2xl font-bold ml-2 text-[#051B29]/[0.5]' onClick={() => handleFocus(false)}> <FaChevronLeft /> </button> : ""}
+                    {isOpen || isScroll || pathName ? '' : <div className='w-[4rem] h-[6px] rounded-md mx-auto bg-[#051B29]/[0.2] mb-3 mt-[-8px]'></div>}
+                    <div className="relative rounded-full flex items-center w-full h-12 bg-[#E6EFF6] overflow-hidden">
+                        {isOpen || isScroll || pathName ? <button className='text-2xl font-bold ml-2 text-[#051B29]/[0.5]' onClick={() => handleFocus(false)}> <FaChevronLeft /> </button> : ""}
                         <input
                             className="peer h-full w-full outline-none text-sm text-gray-700 pr-2 bg-[#e6eff6] px-4 font-bold"
                             type="text"
                             id="search"
                             placeholder="ex : software lab, 1008, machine shop..."
-                            onFocus={() => setFocusHandler(true)}
-                            onBlur={() => handleFocus(false)}
+                            onFocus={() => setFocus(true)}
+                            // onBlur={() => handleFocus(false)}
                             autoComplete='off'
                             ref={ref}
                             autoFocus={false}
@@ -123,7 +116,7 @@ const NavigationBox = () => {
             </div>
 
 
-            {searchText == '' && <div className={`navigationBoxes grid grid-cols-2 gap-5 items-center  justify-between mt-[4.5rem] pb-10 ${location != '/' ? 'hidden' : ""}`}>
+            {searchText == '' && <div className={`navigationBoxes grid grid-cols-2 gap-5 items-center justify-between mt-5 pb-10 ${location != '/' ? 'hidden' : ""}`}>
 
                 {datas.map(data => (
                     <Navibox data={data} key={data.id} />
@@ -169,7 +162,7 @@ const NavigationBox = () => {
             )))}
 
 
-            <div className={`mt-[5.2rem]`}>
+            <div className='mt-5'>
                 <Accordions />
             </div>
 

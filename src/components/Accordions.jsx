@@ -11,6 +11,7 @@ import { useSelector } from "react-redux";
 
 
 
+// eslint-disable-next-line react/prop-types
 function Icon({ id, open }) {
     return (
         <svg

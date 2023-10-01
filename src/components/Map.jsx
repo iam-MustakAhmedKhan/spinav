@@ -41,7 +41,7 @@ const Map = () => {
                                     <FaChevronRight />
                                     <p>{data.floor} </p>
                                     <FaChevronRight />
-                                    <p>{typeof data.roomname == 'number'?'Room No : ':''} {data.roomname}</p>
+                                    <p>{data.roomname}</p>
                                 </div> : <div className="text-black">No Map Found !</div>}
                             </div>
                         )
