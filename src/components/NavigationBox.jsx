@@ -8,7 +8,7 @@ import Navibox from './Navibox';
 import { Link, useLocation, } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { seach } from '../redux/searchSlice.js';
-import Map from './map';
+import Map from './Map';
 
 
 
