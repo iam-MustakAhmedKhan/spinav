@@ -71,8 +71,8 @@ function Icon({ id, open }) {
                                                 <AccordionBody>
                                                     <ul className="flex flex-col gap-y-1 mt-0 ">
                                                         {room.roomNo.map((v, i) => (
-                                                            <Link key={i} to={`${pathName}/${v.roomname.replaceAll(' ', '-')}`}>
-                                                                <li className=" p-3 first:rounded-t-[6px] last:rounded-b-[6px] bg-[#edf6fd]">
+                                                            <Link key={i} className="first:rounded-t-[6px] last:rounded-b-[6px]  bg-[#edf6fd]" to={`${pathName}/${v.roomname.replaceAll(' ', '-')}`}>
+                                                                <li className=" p-3 ">
                                                                     <div className="flex items-center gap-3">
                                                                         <div className="w-[50px] h-[50px] rounded-full  bg-[#e6eff6] p-3 ">
                                                                             <img className="w-full " src={data.icon} alt="" />
