@@ -126,7 +126,7 @@ const NavigationBox = () => {
 
             </div>} */}
 
-            {searchText == '' && location == '/' && <div className={`navigationBoxes grid grid-cols-2 gap-5 items-center  justify-between mt-[4.5rem] pb-10 `}>
+            {searchText == '' && location == '/' && <div className={`navigationBoxes grid grid-cols-2 gap-5 items-center  justify-between ${isOpen || isScroll ? 'mt-[5rem]' :'mt-[4.5rem]'} pb-10 `}>
 
                 {datas.map(data => (
                     <Navibox data={data} key={data.id} />
