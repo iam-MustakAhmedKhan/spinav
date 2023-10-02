@@ -1,0 +1,20 @@
+[
+    {
+        "name":"Shah Alom",
+        "class":"CMT-A2 (2020-2021)" ,
+        "contribution":"Contribution in Design",
+        "pic":"/assets/img/shah.svg"
+    },
+    {
+        "name":"Muhibbur Rahman",
+        "class":"CMT-A2 (2020-2021)" ,
+        "contribution":"Contribution in Data & Code",
+        "pic": "/assets/img/muhibb.svg"
+    },
+    {
+        "name":"Mustak Ahmed Khan",
+        "class":"Outsider" ,
+        "contribution":"Contribution in Code",
+        "pic": "/assets/img/mustak.svg"
+    }
+]

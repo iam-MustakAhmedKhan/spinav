@@ -1,45 +1,23 @@
-import React from "react";
-import {
-    Accordion,
-    AccordionHeader,
-    AccordionBody,
-} from "@material-tailwind/react";
+// import React from "react";
+// import {
+//     Accordion,
+//     AccordionHeader,
+//     AccordionBody,
+// } from "@material-tailwind/react";
 
 import datas from '../data/data.json';
 import { Link, useLocation } from "react-router-dom";
 import { useSelector } from "react-redux";
-
-
-
-// eslint-disable-next-line react/prop-types
-function Icon({ id, open }) {
-    return (
-        <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={2}
-            stroke="currentColor"
-            className={`${id === open ? "rotate-180" : ""} h-5 w-5 mr-2 transition-transform`}
-        >
-            <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-        </svg>
-    );
-}
+import AccondionSingle from "./AccondionSingle";
+import Individual from './Individual';
 
  function Accordions() {
-    const [open, setOpen] = React.useState(0);
+
     const searchValue = useSelector(state => state.search.searchValue);
 
-    const handleOpen = (value) => {
-        setOpen(open === value ? 0 : value);
-
-    };
     const location = useLocation();
     const pathName = location.pathname.replace('/', '');
 
-
-    // const pathNames = location.pathname.split('/')[2]?.replaceAll('-', ' ');
 
     const handleSearch = room => {
         const roomsearchtitle = room.roomname.toUpperCase();
@@ -59,32 +37,23 @@ function Icon({ id, open }) {
                                 searchValue == '' && (
                                     data.roomsdropdown.map((room, index) => (
                                         <div key={index}>
-                                            <Accordion className="bg-[#E6EFF6] px-2 rounded-[12px] gap-y-2 py-2 mb-2 mt-2 " open={open === room.id || searchValue == true} icon={<Icon id={room.id} open={open} />}>
-                                                <AccordionHeader onClick={() => handleOpen(room.id)}>
-                                                    <div className="bg-[#E6EFF6] flex items-center px-2 rounded-[12px] gap-y-2 mb-2 mt-2 Accodionbtn">
-                                                        <div className="w-[50px] h-[50px] rounded-full  bg-[#edf6fd] p-3 mr-3">
-                                                            <img className="w-full" src={data.icon} alt="" />
-                                                        </div>
-                                                        <h1 className="ml-0 font-semibold">{room.title}</h1>
-                                                    </div>
-                                                </AccordionHeader>
-                                                <AccordionBody>
-                                                    <ul className="flex flex-col gap-y-1 mt-0 ">
-                                                        {room.roomNo.map((v, i) => (
-                                                            <Link key={i} className="first:rounded-t-[6px] last:rounded-b-[6px]  bg-[#edf6fd]" to={`${pathName}/${v.roomname.replaceAll(' ', '-')}`}>
-                                                                <li className=" p-3 ">
-                                                                    <div className="flex items-center gap-3">
-                                                                        <div className="w-[50px] h-[50px] rounded-full  bg-[#e6eff6] p-3 ">
-                                                                            <img className="w-full " src={data.icon} alt="" />
-                                                                        </div>
-                                                                        <p className="ml-0 text-left font-semibold">{v.roomname}</p>
+                                            <AccondionSingle icon={data.icon} id={room.id} title={room.title} searchValue={searchValue} accorColor={'bg-[#E6EFF6]'} imgBgColor={'bg-[#edf6fd]'}>
+
+                                                <ul className="flex flex-col gap-y-1 mt-0 ">
+                                                    {room.roomNo.map((v, i) => (
+                                                        <Link key={i} className="first:rounded-t-[6px] last:rounded-b-[6px]  bg-[#edf6fd]" to={`${pathName}/${v.roomname.replaceAll(' ', '-')}`}>
+                                                            <li className=" p-3 ">
+                                                                <div className="flex items-center gap-3">
+                                                                    <div className="w-[50px] h-[50px] rounded-full  bg-[#e6eff6] p-3 ">
+                                                                        <img className="w-full " src={data.icon} alt="" />
                                                                     </div>
-                                                                </li>
-                                                            </Link>
-                                                        ))}
-                                                    </ul>
-                                                </AccordionBody>
-                                            </Accordion >
+                                                                    <p className="ml-0 text-left font-semibold">{v.roomname}</p>
+                                                                </div>
+                                                            </li>
+                                                        </Link>
+                                                    ))}
+                                                </ul>
+                                            </AccondionSingle>
 
                                         </div>
                                     ))
@@ -92,16 +61,12 @@ function Icon({ id, open }) {
                             }
 
                             {searchValue == '' && (data.individual.map((v, i) => (
-                                <Link key={i} to={`${pathName}/${v.roomname.replaceAll(' ', '-')}`} >
-                                    <div className="bg-[#E6EFF6] flex items-center px-2 py-2 rounded-[12px] gap-y-2 mb-2 mt-2">
-                                        <div className="w-[50px] h-[50px] rounded-full  bg-[#edf6fd] p-3 mr-3">
-                                            <img className="w-full" src={data.icon} alt="" />
-                                        </div>
-                                        <p className="ml-0 font-semibold">{v.roomname}</p>
-                                    </div>
-                                </Link>
+                                <Individual key={i} pathName={pathName} icon={data.icon} roomname={v.roomname}/>
                             )))}
 
+                            {searchValue !== '' && (data.individual.filter(handleSearch).map((v, i) => (
+                                <Individual key={i} pathName={pathName} icon={data.icon} roomname={v.roomname}/>
+                            )))}
 
                             {searchValue !== '' && (
                                 data.roomsdropdown.map((room, index) => (
@@ -122,18 +87,6 @@ function Icon({ id, open }) {
                                 ))
                             )
                             }
-
-                            {searchValue !== '' && (data.individual.filter(handleSearch).map((v, i) => (
-                                <Link key={i} to={`${pathName}/${v.roomname.replaceAll(' ', '-')}`}>
-                                    <div className="bg-[#E6EFF6] flex items-center px-2 py-2 rounded-[12px] gap-y-2 mb-2 mt-2">
-                                        <div className="w-[50px] h-[50px] rounded-full  bg-[#edf6fd] p-3 mr-3">
-                                            <img className="w-full" src={data.icon} alt="" />
-                                        </div>
-                                        <p className="ml-0 font-semibold">{v.roomname}</p>
-                                    </div>
-                                </Link>
-                            )))}
-
 
                         </div>
                     );

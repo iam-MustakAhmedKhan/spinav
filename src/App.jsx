@@ -3,6 +3,7 @@ import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import NavigationBox from "./components/NavigationBox";
 import Layout from "./components/Layout";
+import SidebarMenu from "./components/SidebarMenu";
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
               <Navbar />
               <Hero />
               <NavigationBox />
+              <SidebarMenu/>
 
 
             </div>
