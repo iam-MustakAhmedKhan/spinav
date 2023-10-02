@@ -21,7 +21,7 @@ const AccondionSingle = ({ id, icon, title, searchValue, accorColor, bodystyle, 
                         <div className={`w-[50px] h-[50px] rounded-full  ${imgBgColor} p-3 mr-3`}>
                             <img className="w-full" src={icon} alt="" />
                         </div>
-                        <h1 className="ml-0 font-semibold">{title}</h1>
+                        <h1 className="ml-0 font-semibold text-[1rem]">{title}</h1>
                     </div>
                 </AccordionHeader>
                 <AccordionBody className={`${bodystyle}`}>

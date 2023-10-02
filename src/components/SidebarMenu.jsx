@@ -39,7 +39,7 @@ const SidebarMenu = () => {
                         icon={'/assets/icon/dev.svg'}
                         id={2}
                         title={'Developers'}
-                        bodystyle={' p-6 rounded-md'}
+                        bodystyle={'mt-3 rounded-md'}
                         accorColor={'bg-[#076CAB] '}
                         imgBgColor={'bg-[#0076BE]'}
                     >
@@ -56,10 +56,10 @@ const SidebarMenu = () => {
                         <div className='bg-[#e6eff6] flex flex-col items-center gap-5 rounded-md p-4 mb-3'>
                             <h1 className='text-lg font-bold'>Special Thanks:</h1>
                             <div className="devInfo text-center">
-                                <p className="name text-lg">Name 1</p>
-                                <p className="name text-lg">Name 2</p>
-                                <p className="name text-lg">Name 3</p>
-                                <p className="name text-lg">Name 4</p>
+                                <p className="name text-lg">Mahbubur Rahman Tamim</p>
+                                <p className="name text-lg">MD. Rakibul Islam</p>
+                                <p className="name text-lg">Aminul Islam</p>
+                                <p>CIVIL/6th/2020-21</p>
                             </div>
                         </div >
                     </AccondionSingle>

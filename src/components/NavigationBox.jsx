@@ -126,11 +126,11 @@ const NavigationBox = () => {
 
 
 
-            <div className='mt-[5rem]'>
+            <div className='mt-[4.5rem]'>
                 {searchValue !== '' && (
                     datas.map(data => (
                         data.roomsdropdown.map((room, index) => (
-                            <ul key={index} className={`${isClick ? "hidden" : 'flex'} flex-col gap-y-1 mt-0 mb-1`}>
+                            <ul key={index} className={`${isClick ? "hidden" : 'flex'} flex-col gap-y-1 mt-0`}>
                                 {room.roomNo.filter(handleSearch).map((v, i) => (
                                     <Link key={i} onClick={() => onClickHandler(v.roomname)} to={`/${data.title}/${v.roomname.replaceAll(' ', '-')}`}>
 

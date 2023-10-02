@@ -6,9 +6,9 @@ import { BsFacebook, BsInstagram, BsGithub, BsLinkedin } from 'react-icons/bs';
 // eslint-disable-next-line react/prop-types
 const DevCard = ({ name, className, cont, pic, socials }) => {
     return (
-        <div className='bg-[#e6eff6] flex flex-col items-center gap-5 rounded-md p-4 mb-3'>
-            <div className="devPic w-[7vh]">
-                <img src={pic} alt="" />
+        <div className='bg-[#e6eff6] flex flex-col items-center gap-5 rounded-md p-4 mb-3 text-center'>
+            <div className="devPic w-[200px] text-center">
+                <img className="mx-auto" src={pic} alt="" />
             </div>
             <div className="devInfo text-center">
                 <p className="name font-bold text-lg">{name}</p>
@@ -18,25 +18,25 @@ const DevCard = ({ name, className, cont, pic, socials }) => {
                     {socials?.map((v, i) => {
                         switch (v.name) {
                             case 'Facebook':
-                                return <Link to={v.link} key={i}>
+                                return <Link target="_blank" to={v.link} key={i}>
                                     {
                                         <BsFacebook />
                                     }
                                 </Link>;
                             case 'Instagram':
-                                return <Link to={v.link} key={i}>
+                                return <Link target="_blank" to={v.link} key={i}>
                                     {
                                         <BsInstagram />
                                     }
                                 </Link>;
                             case 'Linkedin':
-                                return <Link to={v.link} key={i}>
+                                return <Link target="_blank" to={v.link} key={i}>
                                     {
                                         <BsLinkedin />
                                     }
                                 </Link>;
                             case 'Github':
-                                return <Link to={v.link} key={i}>
+                                return <Link target="_blank" to={v.link} key={i}>
                                     {
                                         <BsGithub />
                                     }

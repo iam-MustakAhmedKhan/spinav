@@ -18,12 +18,12 @@
             {
                 "name":"Github",
                 "component":"BsGithub",
-                "link":""
+                "link":"https://github.com/dev-shahalom"
             },
             {
                 "name":"Linkedin",
                 "component":"BsLinkedin",
-                "link": ""
+                "link": "https://www.linkedin.com/in/shahalom-iau/"
                 
             }
         ]
@@ -37,17 +37,17 @@
             {
                 "name": "Facebook",
                 "component": "BsFacebook",
-                "link": ""
+                "link": "https://www.facebook.com/m.muhib.68442"
             },
             {
                 "name": "Instagram",
                 "component": "BsInstagram",
-                "link": ""
+                "link": "https://www.instagram.com/muhib2929"
             },
             {
                 "name": "Github",
                 "component": "BsGithub",
-                "link": ""
+                "link": "https://github.com/muhib68442"
             },
             {
                 "name": "Linkedin",
@@ -70,12 +70,13 @@
             {
                 "name": "Instagram",
                 "component": "BsInstagram",
-                "link": "https://github.com/iam-MustakAhmedKhan"
+                "link": "https://www.instagram.com/iam.mustakahmedkhan/?hl=en"
             },
             {
                 "name": "Github",
                 "component": "BsGithub",
-                "link": "https://www.instagram.com/iam.mustakahmedkhan/?hl=en"
+                "link": "https: //github.com/iam-MustakAhmedKhan"
+                
             },
             {
                 "name": "Linkedin",
