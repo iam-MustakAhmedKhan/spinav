@@ -77,7 +77,6 @@ const NavigationBox = () => {
         setFocus(v);
     };
 
-    console.log(pathName);
 
 
 

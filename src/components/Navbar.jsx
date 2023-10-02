@@ -1,6 +1,16 @@
+import { AiOutlineMenu } from 'react-icons/ai';
+import { RxCross2 } from 'react-icons/rx';
+import { useDispatch, useSelector } from 'react-redux';
+import { isToogled } from '../redux/toogleSlice';
 
 
 const Navbar = () => {
+    const toogle = useSelector(state => state.toogle.toggled)
+    const dispatch = useDispatch()
+
+    const onToogleHandler = () => {
+        dispatch(isToogled(!toogle))
+    }
 
 
     return (
@@ -9,8 +19,8 @@ const Navbar = () => {
             <div>
                 <img src="/assets/img/namedLogo.svg" alt="" />
             </div>
-            <div>
-                <img src="/assets/icon/hamburg.svg" alt="" />
+            <div className='text-3xl cursor-pointer' onClick={onToogleHandler}  >
+                {toogle ? <RxCross2 /> : <AiOutlineMenu />}
             </div>
         </div>
     );

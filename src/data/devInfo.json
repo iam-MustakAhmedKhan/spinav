@@ -3,18 +3,86 @@
         "name":"Shah Alom",
         "class":"CMT-A2 (2020-2021)" ,
         "contribution":"Contribution in Design",
-        "pic":"/assets/img/shah.svg"
+        "pic":"/assets/img/shah.svg",
+        "social":[
+            {
+                "name":"Facebook",
+                "component":"BsFacebook",
+                "link":"https://www.facebook.com/shahalom.iau"
+            },
+            {
+                "name":"Instagram",
+                "component":"BsInstagram",
+                "link":"https://www.instagram.com/shahalom.iau"
+            },
+            {
+                "name":"Github",
+                "component":"BsGithub",
+                "link":""
+            },
+            {
+                "name":"Linkedin",
+                "component":"BsLinkedin",
+                "link": ""
+                
+            }
+        ]
     },
     {
         "name":"Muhibbur Rahman",
         "class":"CMT-A2 (2020-2021)" ,
         "contribution":"Contribution in Data & Code",
-        "pic": "/assets/img/muhibb.svg"
+        "pic": "/assets/img/muhibb.svg",
+        "social": [
+            {
+                "name": "Facebook",
+                "component": "BsFacebook",
+                "link": ""
+            },
+            {
+                "name": "Instagram",
+                "component": "BsInstagram",
+                "link": ""
+            },
+            {
+                "name": "Github",
+                "component": "BsGithub",
+                "link": ""
+            },
+            {
+                "name": "Linkedin",
+                "component": "BsLinkedin",
+                "link": ""
+            }
+        ]
     },
     {
         "name":"Mustak Ahmed Khan",
         "class":"Outsider" ,
         "contribution":"Contribution in Code",
-        "pic": "/assets/img/mustak.svg"
+        "pic": "/assets/img/mustak.svg",
+        "social": [
+            {
+                "name": "Facebook",
+                "component": "BsFacebook",
+                "link": "https://www.facebook.com/iam.MustakAhmedKhan/"
+            },
+            {
+                "name": "Instagram",
+                "component": "BsInstagram",
+                "link": "https://github.com/iam-MustakAhmedKhan"
+            },
+            {
+                "name": "Github",
+                "component": "BsGithub",
+                "link": "https://www.instagram.com/iam.mustakahmedkhan/?hl=en"
+            },
+            {
+                "name": "Linkedin",
+                "component": "BsLinkedin",
+                "link": "https://www.linkedin.com/in/iam-mustakahmedkhan/"
+            }
+        ]
+        
     }
 ]

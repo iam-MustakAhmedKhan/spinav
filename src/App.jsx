@@ -1,10 +1,8 @@
 import { HashRouter } from "react-router-dom";
-import Hero from "./components/Hero";
-import Navbar from "./components/Navbar";
-import NavigationBox from "./components/NavigationBox";
-import Layout from "./components/Layout";
-import SidebarMenu from "./components/SidebarMenu";
+import { Suspense, lazy } from "react";
+import { Circles } from "react-loader-spinner";
 
+const Content=lazy(()=>import('./components/Content.jsx'))
 
 function App() {
 
@@ -14,21 +12,19 @@ function App() {
 
     <HashRouter>
 
-      <Layout>
+      <Suspense fallback={<Circles
+        height="80"
+        width="80"
+        color="#0076BE"
+        ariaLabel="circles-loading"
+        wrapperStyle={{}}
+        wrapperClass="loader"
+        visible={true}
+      />}>
 
-        <div className="bg-[url(/assets/img/bg.svg)] bg-no-repeat bg-cover fixed w-full">
-          <div className="container max-w-[640px] w-full h-screen ">
-            <div className="w-full h-screen backdrop-blur-md">
-              <Navbar />
-              <Hero />
-              <NavigationBox />
-              <SidebarMenu/>
+        <Content/>
 
-
-            </div>
-          </div>
-        </div>
-      </Layout>
+      </Suspense>
 
     </HashRouter>
 

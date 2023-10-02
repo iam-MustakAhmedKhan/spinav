@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 
 // eslint-disable-next-line react/prop-types
-const Individual = ({icon,pathName,roomname}) => {
+const Individual = ({ icon, pathName, roomname }) => {
   return (
       // eslint-disable-next-line react/prop-types
       <Link to={`${pathName}/${roomname.replaceAll(' ', '-')}`}>

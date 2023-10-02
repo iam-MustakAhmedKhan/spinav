@@ -12,6 +12,7 @@ const AccondionSingle = ({ id, icon, title, searchValue, accorColor, bodystyle, 
 
     };
 
+
     return (
       
             <Accordion className={`px-2 rounded-[12px] gap-y-2 py-2 mb-2 mt-2 ${accorColor}`} open={open === id || searchValue == true} icon={<Icon id={id} open={open} />}>

@@ -27,6 +27,7 @@ import Individual from './Individual';
     };
 
 
+     
     return (
         <>
             {datas.map((data, i) => {

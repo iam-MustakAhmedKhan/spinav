@@ -31,7 +31,22 @@
     scrollbar-width: none;
     /* Firefox */
 }
-.Accodionbtn{
+
+.Accodionbtn {
     padding: 0;
 }
 
+.loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+}
+
+.maploader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+
+}
