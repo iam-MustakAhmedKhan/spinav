@@ -32,20 +32,14 @@ export const requestForToken = () => {
             return getToken(messaging, {
                 vapidKey: import.meta.env.NOTIFICATION_SERVER,
             })
-                .then((currentToken) => {
+                .then( async(currentToken) => {
                     if (currentToken) {
                         console.log("current token for client: ", currentToken);
 
-                        axios
+                       await axios
                             .post(import.meta.env.SERVER, {
                                 token: currentToken,
                             })
-                            .then((response) => {
-                                console.log(response);
-                            })
-                            .catch((error) => {
-                                console.log(error);
-                            });
                     } else {
                         // Show permission request UI
                         console.log(
