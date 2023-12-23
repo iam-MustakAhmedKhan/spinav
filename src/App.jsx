@@ -1,4 +1,4 @@
-import { HashRouter } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import { Suspense, lazy } from "react";
 import { Circles } from "react-loader-spinner";
 
@@ -10,7 +10,7 @@ function App() {
   return (
 
 
-    <HashRouter>
+    <BrowserRouter>
 
       <Suspense fallback={<Circles
         height="80"
@@ -26,7 +26,7 @@ function App() {
 
       </Suspense>
 
-    </HashRouter>
+    </BrowserRouter>
 
 
 
