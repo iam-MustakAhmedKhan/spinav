@@ -36,14 +36,6 @@ export const requestForToken = () => {
                 .then((currentToken) => {
                     if (currentToken) {
                         console.log("current token for client: ", currentToken);
-                        
-                        // axios.post("http://localhost:3000/send", {
-                        //     token: currentToken,
-                        //     title: 'Hello',
-                        //     description:'Tello'
-                        // }).then((response) => {
-                        // console.log(response)
-                        // }
 
                         axios.post('http://localhost:3000/create', {
                             token: currentToken,
