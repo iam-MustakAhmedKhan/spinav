@@ -20,9 +20,9 @@ const Notification = () => {
         if (notification?.title) {
             notify();
         }
-        requestForToken();
     }, [notification]);
-
+    
+    requestForToken();
 
     onMessageListener()
         .then((payload) => {

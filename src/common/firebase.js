@@ -1,7 +1,9 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-import { getMessaging, getToken,onMessage } from "firebase/messaging";
+import { getMessaging, getToken, onMessage } from "firebase/messaging";
+
+import axios from "axios";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -33,7 +35,16 @@ export const requestForToken = () => {
                 .then((currentToken) => {
                     if (currentToken) {
                         console.log("current token for client: ", currentToken);
-                        // Perform any other neccessary action with the token
+                        
+                        // axios.post("http://localhost:3000/send", {
+                        //     token: currentToken,
+                        //     title: 'Hello',
+                        //     description:'Tello'
+                        // }).then((response) => {
+                        // console.log(response)
+                        // }
+
+
                     } else {
                         // Show permission request UI
                         console.log(
@@ -56,7 +67,7 @@ export const requestForToken = () => {
 export const onMessageListener = () =>
     new Promise((resolve) => {
         onMessage(messaging, (payload) => {
-            console.log("payload", payload);
+
             resolve(payload);
         });
     });

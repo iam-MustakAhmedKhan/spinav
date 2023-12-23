@@ -1,6 +1,5 @@
-// Scripts for firebase and firebase messaging
-importScripts("https://www.gstatic.com/firebasejs/8.2.0/firebase-app.js");
-importScripts("https://www.gstatic.com/firebasejs/8.2.0/firebase-messaging.js");
+import { initializeApp } from "firebase/app";
+import { getMessaging } from "firebase/messaging/sw";
 
 const firebaseConfig = {
     apiKey: "AIzaSyDeROXU_dlqTzJ_se15wxyA4VArIkeSLxo",
@@ -12,13 +11,13 @@ const firebaseConfig = {
     measurementId: "G-DR3YW07D31",
 };
 
-firebase.initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig);
 
-const messaging = firebase.messaging();
-
+const messaging = getMessaging(app);
 
 messaging.onBackgroundMessage(function (payload) {
     console.log("Received background message ", payload);
+    console.log("hello", payload);
     // Customize notification here
     const notificationTitle = payload.notification.title;
     const notificationOptions = {
