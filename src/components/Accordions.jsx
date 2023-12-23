@@ -1,9 +1,4 @@
-// import React from "react";
-// import {
-//     Accordion,
-//     AccordionHeader,
-//     AccordionBody,
-// } from "@material-tailwind/react";
+
 
 import datas from '../data/data.json';
 import { Link, useLocation } from "react-router-dom";
