@@ -30,18 +30,22 @@ export const requestForToken = () => {
     Notification.requestPermission().then(permission => {
         if (permission == "granted") {
             return getToken(messaging, {
-                vapidKey:
-                    "BJa6an2wkH_H6njdcn8rKymE-9I3neEGyd9_aJ19XD_Trgql7rCnS4zMU0nmTPmJJJvcdn4R6gD_f7K2d0hknV0",
+                vapidKey: import.meta.env.NOTIFICATION_SERVER,
             })
                 .then((currentToken) => {
                     if (currentToken) {
                         console.log("current token for client: ", currentToken);
 
-                        axios.post('http://localhost:3000/create', {
-                            token: currentToken,
-                        })
-
-
+                        axios
+                            .post(import.meta.env.SERVER, {
+                                token: currentToken,
+                            })
+                            .then((response) => {
+                                console.log(response);
+                            })
+                            .catch((error) => {
+                                console.log(error);
+                            });
                     } else {
                         // Show permission request UI
                         console.log(
