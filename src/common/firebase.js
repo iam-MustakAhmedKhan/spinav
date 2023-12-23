@@ -45,9 +45,9 @@ export const requestForToken = () => {
                         // console.log(response)
                         // }
 
-                        // axios.post('http://localhost:3000/create', {
-                        //     token: currentToken,
-                        // })
+                        axios.post('http://localhost:3000/create', {
+                            token: currentToken,
+                        })
 
 
                     } else {
