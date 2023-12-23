@@ -29,7 +29,7 @@
         ]
     },
     {
-        "name":"Muhibbur Rahman",
+        "name":"Md. Muhibbur Rahman",
         "class":"CMT-A2 (2020-2021)" ,
         "contribution":"Contribution in Data & Code",
         "pic": "/assets/img/muhibb.svg",
@@ -52,7 +52,7 @@
             {
                 "name": "Linkedin",
                 "component": "BsLinkedin",
-                "link": ""
+                "link": "https://www.linkedin.com/in/md-muhibbur-rahman-9624642a1?trk=contact-info"
             }
         ]
     },

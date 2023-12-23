@@ -73,6 +73,15 @@ const SidebarMenu = () => {
                             </div>
                         </div>
                     </AccondionSingle>
+
+                    <div className='h-full text-center mt-10'>
+                        <p className='text-white/50 mb-2 text-xl font-light'>Download our Android App</p>
+                        <button className='bg-blue-300 px-4 py-2 rounded-lg'>
+                            
+                            Download
+                        </button>
+                    </div>
+
                 </div>
             </div>
         </div>

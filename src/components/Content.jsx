@@ -4,7 +4,11 @@ import Hero from './Hero';
 import NavigationBox from './NavigationBox';
 import SidebarMenu from './SidebarMenu';
 
+
+
 const Content = () => {
+
+   
   return (
       <Layout>
 
@@ -19,8 +23,9 @@ const Content = () => {
                       <NavigationBox />
                       <SidebarMenu />
 
+                      
 
-
+            
 
                   </div>
               </div>
