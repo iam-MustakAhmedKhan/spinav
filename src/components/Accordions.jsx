@@ -33,7 +33,7 @@ import Individual from './Individual';
             {datas.map((data, i) => {
                 if (data?.title == pathName) {
                     return (
-                        <div key={i} >
+                        <div key={i} className='pb-[5.2rem]' >
                             {
                                 searchValue == '' && (
                                     data.roomsdropdown.map((room, index) => (
@@ -70,9 +70,10 @@ import Individual from './Individual';
                             )))}
 
                             {searchValue !== '' && (
-                                data.roomsdropdown.map((room, index) => (
-                                    <ul key={index} className="flex flex-col gap-y-1 mt-0">
-                                        {room.roomNo.filter(handleSearch).map((v, i) => (
+                                <ul className="flex flex-col gap-y-1 mt-0 pb-5">
+                                    {
+                                        data.roomsdropdown.map((room, index) => {
+                                             {room.roomNo.filter(handleSearch).map((v, i) => (
                                             <Link key={i} to={`${pathName}/${v.roomname.replaceAll(' ', '-')}`}>
                                                 <li className=" p-3 first:rounded-t-[6px] last:rounded-b-[6px] bg-[#edf6fd]">
                                                     <div className="flex items-center gap-3">
@@ -84,8 +85,9 @@ import Individual from './Individual';
                                                 </li>
                                             </Link>
                                         ))}
+                                         })
+                               }
                                     </ul>
-                                ))
                             )
                             }
 

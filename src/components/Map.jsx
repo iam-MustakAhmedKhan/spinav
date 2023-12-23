@@ -2,8 +2,9 @@ import { FaChevronRight } from "react-icons/fa";
 import { useLocation } from "react-router-dom";
 import datas from '../data/mapArray.json';
 import { MapInteractionCSS } from 'react-map-interaction';
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Circles } from "react-loader-spinner";
+import { data } from "autoprefixer";
 
 
 const Map = () => {
@@ -21,6 +22,12 @@ const Map = () => {
         }
     })
 
+
+    useEffect(() => {
+       
+         setImgLoad(false);
+        
+    }, [pathName]);
 
 
 
@@ -44,7 +51,7 @@ const Map = () => {
                                         visible={true}
                                     />}
                                     <MapInteractionCSS value={zoom.value}  onChange={(value) => setZoom({ value }) }>
-                                        {<img className={`w-full ${imgload?'':'hidden'} `} onLoad={() => setImgLoad(true)} src={data.map} alt="" />}
+                                        {<img className={`w-full ${imgload?'':'hidden'} `} onLoad={() => setImgLoad(true)} src={data.map} alt="map" />}
                                     </MapInteractionCSS>
                                 </div>
 
