@@ -30,16 +30,19 @@ export const requestForToken = () => {
     Notification.requestPermission().then(permission => {
         if (permission == "granted") {
             return getToken(messaging, {
-                vapidKey: import.meta.env.NOTIFICATION_SERVER,
+                vapidKey:
+                    "BJa6an2wkH_H6njdcn8rKymE-9I3neEGyd9_aJ19XD_Trgql7rCnS4zMU0nmTPmJJJvcdn4R6gD_f7K2d0hknV0",
             })
-                .then( async(currentToken) => {
+                .then((currentToken) => {
                     if (currentToken) {
                         console.log("current token for client: ", currentToken);
 
-                       await axios
-                            .post(import.meta.env.SERVER, {
+                        axios.post(
+                            "https://spi-server.onrender.com/create",
+                            {
                                 token: currentToken,
-                            })
+                            }
+                        );
                     } else {
                         // Show permission request UI
                         console.log(
