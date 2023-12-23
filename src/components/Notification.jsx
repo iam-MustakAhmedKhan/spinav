@@ -20,12 +20,15 @@ const Notification = () => {
         if (notification?.title) {
             notify();
         }
+        requestForToken();
     }, [notification]);
     
-    requestForToken();
+    console.log(notification)
 
     onMessageListener()
         .then((payload) => {
+
+            console.log(payload)
             setNotification({
                 title: payload?.notification?.title,
                 body: payload?.notification?.body,

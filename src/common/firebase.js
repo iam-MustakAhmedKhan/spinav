@@ -23,7 +23,8 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 
-const messaging = getMessaging(app);
+const messaging = getMessaging();
+
 
 export const requestForToken = () => {
     Notification.requestPermission().then(permission => {
@@ -44,9 +45,9 @@ export const requestForToken = () => {
                         // console.log(response)
                         // }
 
-                        axios.post('http://localhost:3000/create', {
-                            token: currentToken,
-                        })
+                        // axios.post('http://localhost:3000/create', {
+                        //     token: currentToken,
+                        // })
 
 
                     } else {
@@ -67,6 +68,7 @@ export const requestForToken = () => {
         }
     })
 };
+
 
 export const onMessageListener = () =>
     new Promise((resolve) => {

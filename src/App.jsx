@@ -1,7 +1,7 @@
 import { BrowserRouter } from "react-router-dom";
 import { Suspense, lazy } from "react";
 import { Circles } from "react-loader-spinner";
-import Notification from "./components/Notification.jsx";
+
 
 const Content=lazy(()=>import('./components/Content.jsx'))
 
@@ -25,7 +25,7 @@ function App() {
       />}>
 
         <Content />
-        <Notification/>
+        
 
       </Suspense>
 
