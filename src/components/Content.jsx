@@ -13,7 +13,7 @@ const Content = () => {
   return (
       <Layout>
 
-          <div className="bg-[url(/assets/img/bg.svg)] bg-no-repeat bg-cover fixed w-full">
+          <div className="bg-[url(/assets/img/bg.svg)] bg-no-repeat bg-cover h-screen fixed w-full">
               <div className="container max-w-[640px] w-full h-screen ">
                   <div className="w-full h-screen backdrop-blur-md overflow-hidden">
 
