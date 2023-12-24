@@ -4,6 +4,7 @@ import DevCard from './DevCard';
 import devinfo from '../data/devInfo.json';
 import { useSelector } from 'react-redux';
 import { Download } from "lucide-react";
+import { Link } from 'react-router-dom';
 
 const SidebarMenu = () => {
     const toogle = useSelector(state => state.toogle.toggled)
@@ -79,10 +80,12 @@ const SidebarMenu = () => {
                         <p className="text-white/50 mb-2 text-xl font-light">
                             Download our Android App
                         </p>
-                        <button className="bg-[#076cab] hover:bg-black/20 flex items-center justify-center gap-2 text-white/50 px-4 py-2 rounded-lg">
-                            <Download className='w-5 h-5' />
-                            <p>Download</p>
-                        </button>
+                        <Link to="https://drive.google.com/uc?export=download&id=1R1nCQDtVa1sDLDKdxW_mJH28voSaRUn4">
+                            <button className="bg-[#076cab] hover:bg-black/20 flex items-center justify-center gap-2 text-white/50 px-4 py-2 rounded-lg">
+                                <Download className="w-5 h-5" />
+                                <p>Download</p>
+                            </button>
+                        </Link>
                     </div>
                 </div>
             </div>
