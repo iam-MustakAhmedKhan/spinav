@@ -3,6 +3,7 @@ import AccondionSingle from './AccondionSingle';
 import DevCard from './DevCard';
 import devinfo from '../data/devInfo.json';
 import { useSelector } from 'react-redux';
+import { Download } from "lucide-react";
 
 const SidebarMenu = () => {
     const toogle = useSelector(state => state.toogle.toggled)
@@ -74,14 +75,15 @@ const SidebarMenu = () => {
                         </div>
                     </AccondionSingle>
 
-                    <div className='h-full text-center mt-10'>
-                        <p className='text-white/50 mb-2 text-xl font-light'>Download our Android App</p>
-                        <button className='bg-blue-300 px-4 py-2 rounded-lg'>
-                            
-                            Download
+                    <div className="h-full flex flex-col items-center justify-center text-center w-full mt-10">
+                        <p className="text-white/50 mb-2 text-xl font-light">
+                            Download our Android App
+                        </p>
+                        <button className="bg-[#076cab] hover:bg-black/20 flex items-center justify-center gap-2 text-white/50 px-4 py-2 rounded-lg">
+                            <Download className='w-5 h-5' />
+                            <p>Download</p>
                         </button>
                     </div>
-
                 </div>
             </div>
         </div>
