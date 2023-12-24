@@ -56,7 +56,7 @@ export const requestForToken = () => {
                         err
                     );
                 });
-        } else {
+        } else if(permission=='denied') {
             console.log("User Permission Denied.");
         }
     })
