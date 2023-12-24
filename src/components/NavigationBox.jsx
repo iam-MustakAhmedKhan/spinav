@@ -199,7 +199,7 @@ const NavigationBox = () => {
                 </div>
             )}
 
-            <div className={`${searchValue !==""?'pb-10':' '}`}>
+            <div className={`${searchValue !==""?'pb-10 overflow-y-auto':' '}`}>
                 {searchValue !== "" &&
                     datas.map((data) =>
                         data.individual.filter(handleSearch).map((v, i) => (
