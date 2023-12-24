@@ -202,7 +202,7 @@ const NavigationBox = () => {
             <div
                 className={`${
                     searchValue !== ""
-                        ? "pb-28 overflow-y-auto h-full scrollbarHide mb-10"
+                        ? "pb-48 overflow-y-auto h-full scrollbarHide mb-10"
                         : " "
                 }`}
             >
