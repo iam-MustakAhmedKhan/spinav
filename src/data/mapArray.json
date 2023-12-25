@@ -90,43 +90,43 @@
         "building": "Administrative"
     },
     {
-        "roomname": "RD 1",
+        "roomname": "RD-1",
         "map": "/assets/maps/rd1.svg",
         "floor": "1st",
         "building": "RD"
     },
     {
-        "roomname": "RD 2",
+        "roomname": "RD-2",
         "map": "/assets/maps/rd2.svg",
         "floor": "1st",
         "building": "RD"
     },
     {
-        "roomname": "RD 3",
+        "roomname": "RD-3",
         "map": "/assets/maps/rd3.svg",
         "floor": "3rd",
         "building": "RD"
     },
     {
-        "roomname": "RD 4",
+        "roomname": "RD-4",
         "map": "/assets/maps/rd4.svg",
         "floor": "3rd",
         "building": "RD"
     },
     {
-        "roomname": "RD 5",
+        "roomname": "RD-5",
         "map": "/assets/maps/rd5.svg",
         "floor": "3rd",
         "building": "RD"
     },
     {
-        "roomname": "D 1",
+        "roomname": "D-1",
         "map": "/assets/maps/d1.svg",
         "floor": "3rd",
         "building": "Administrative"
     },
     {
-        "roomname": "D 2",
+        "roomname": "D-2",
         "map": "/assets/maps/d2.svg",
         "floor": "3rd",
         "building": "Administrative"

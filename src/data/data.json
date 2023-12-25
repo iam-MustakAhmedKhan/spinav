@@ -120,31 +120,31 @@
                 "title":"Room no : RD1-RD5",
                 "roomNo":[ 
                     {
-                        "roomname":"RD 1",
+                        "roomname":"RD-1",
                         "map":"/assets/maps/RD1.svg",
                         "floor":"1st",
                         "building":"RD"
                     },
                     {
-                        "roomname":"RD 2",
+                        "roomname":"RD-2",
                         "map":"/assets/maps/RD2.svg",
                         "floor":"1st",
                         "building":"RD"
                     },
                     {
-                        "roomname":"RD 3",
+                        "roomname":"RD-3",
                         "map":"/assets/maps/RD3.svg",
                         "floor":"3rd",
                         "building":"RD"
                     },
                     {
-                        "roomname":"RD 4",
+                        "roomname":"RD-4",
                         "map":"/assets/maps/RD4.svg",
                         "floor":"3rd",
                         "building":"RD"
                     },
                     {
-                        "roomname":"RD 5",
+                        "roomname":"RD-5",
                         "map":"/assets/maps/RD5.svg",
                         "floor":"3rd",
                         "building":"RD"
@@ -157,13 +157,13 @@
                 "title":"Room no : D-1 & D-2",
                 "roomNo":[ 
                     {
-                        "roomname":"D 1",
+                        "roomname":"D-1",
                         "map":"/assets/maps/D1.svg",
                         "floor":"3rd",
                         "building":"Administrative"
                     },
                     {
-                        "roomname":"D 2",
+                        "roomname":"D-2",
                         "map":"/assets/maps/D2.svg",
                         "floor":"3rd",
                         "building":"Administrative"
