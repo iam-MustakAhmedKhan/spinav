@@ -55,35 +55,5 @@
                 "link": "https://www.linkedin.com/in/md-muhibbur-rahman-9624642a1?trk=contact-info"
             }
         ]
-    },
-    {
-        "name":"Mustak Ahmed Khan",
-        "class":"CSE" ,
-        "contribution":"Contribution in Code",
-        "pic": "/assets/img/mustak.svg",
-        "social": [
-            {
-                "name": "Facebook",
-                "component": "BsFacebook",
-                "link": "https://www.facebook.com/iam.MustakAhmedKhan/"
-            },
-            {
-                "name": "Instagram",
-                "component": "BsInstagram",
-                "link": "https://www.instagram.com/iam.mustakahmedkhan/?hl=en"
-            },
-            {
-                "name": "Github",
-                "component": "BsGithub",
-                "link": "https: //github.com/iam-MustakAhmedKhan"
-                
-            },
-            {
-                "name": "Linkedin",
-                "component": "BsLinkedin",
-                "link": "https://www.linkedin.com/in/iam-mustakahmedkhan/"
-            }
-        ]
-        
     }
 ]
