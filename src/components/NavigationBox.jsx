@@ -156,12 +156,12 @@ const NavigationBox = () => {
                     <ul
                         className={`${
                             isClick ? "hidden" : "flex"
-                        } flex-col gap-y-1 mt-0`}
+                        } flex-col gap-y-1 mt-0 mb-10 h-screen scrollbarHide overflow-y-auto`}
                     >
                         {datas.map((data) =>
                             data.roomsdropdown.map((room, index) => {
                                 {
-                                  return  room.roomNo
+                                    return room.roomNo
                                         .filter(handleSearch)
                                         .map((v, i) => (
                                             <Link
