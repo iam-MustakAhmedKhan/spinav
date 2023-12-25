@@ -35,8 +35,6 @@ export const requestForToken = () => {
             })
                 .then((currentToken) => {
                     if (currentToken) {
-                        console.log("current token for client: ", currentToken);
-
                         axios.post(
                             "https://spi-server.onrender.com/create",
                             {
@@ -70,5 +68,3 @@ export const onMessageListener = () =>
             resolve(payload);
         });
     });
-
-console.log(analytics)
