@@ -152,11 +152,11 @@ const NavigationBox = () => {
             )}
 
             {searchValue !== "" && (
-                <div className="mt-[4.5rem]">
+                <div className="mt-[4.5rem] overflow-y-auto scrollbarHide h-screen">
                     <ul
                         className={`${
                             isClick ? "hidden" : "flex"
-                        } flex-col gap-y-1 mt-0 mb-10 h-screen scrollbarHide overflow-y-auto`}
+                        } flex-col gap-y-1 mt-0 `}
                     >
                         {datas.map((data) =>
                             data.roomsdropdown.map((room, index) => {
@@ -196,18 +196,7 @@ const NavigationBox = () => {
                             })
                         )}
                     </ul>
-                </div>
-            )}
-
-            <div
-                className={`${
-                    searchValue !== ""
-                        ? "pb-48 overflow-y-auto h-full scrollbarHide mb-10"
-                        : " "
-                }`}
-            >
-                {searchValue !== "" &&
-                    datas.map((data) =>
+                    {datas.map((data) =>
                         data.individual.filter(handleSearch).map((v, i) => (
                             <Link
                                 key={i}
@@ -236,7 +225,9 @@ const NavigationBox = () => {
                             </Link>
                         ))
                     )}
-            </div>
+                </div>
+            )}
+
 
             <div className="pt-0 pb-0">
                 {searchValue == "" && (
