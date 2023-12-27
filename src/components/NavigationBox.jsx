@@ -152,7 +152,7 @@ const NavigationBox = () => {
             )}
 
             {searchValue !== "" && (
-                <div className="mt-[4.5rem] overflow-y-auto scrollbarHide h-screen">
+                <div className="mt-[4.5rem] overflow-y-auto scrollbarHide h-[calc(100vh-4.5rem)]">
                     <ul
                         className={`${
                             isClick ? "hidden" : "flex"
@@ -227,7 +227,6 @@ const NavigationBox = () => {
                     )}
                 </div>
             )}
-
 
             <div className="pt-0 pb-0">
                 {searchValue == "" && (
