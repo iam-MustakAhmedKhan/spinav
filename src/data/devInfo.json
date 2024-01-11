@@ -63,22 +63,22 @@
         "social": [
             {
                 "name": "Facebook",
-                "component": "facebook",
+                "component": "BsFacebook",
                 "link": "https://www.facebook.com/iam.MustakAhmedKhan/"
             },
             {
                 "name": "Instagram",
-                "component": "instagram",
+                "component": "BsInstagram",
                 "link": "https://www.instagram.com/iam.mustakahmedkhan"
             },
             {
                 "name": "Github",
-                "component": "github",
+                "component": "BsGithub",
                 "link": "https://github.com/iam-MustakAhmedKhan"
             },
             {
                 "name": "Linkedin",
-                "component": "linkedin",
+                "component": "BsLinkedin",
                 "link": "https://www.linkedin.com/in/iam-mustakahmedkhan/"
             }
         ]
