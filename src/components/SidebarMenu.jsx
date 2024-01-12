@@ -90,6 +90,13 @@ const SidebarMenu = () => {
                             </button>
                         </Link>
                     </div>
+
+                    <div className="mt-10 text-center">
+                        <p className="text-2xl font-medium text-white/50">Supervised by</p>
+                        <p className="text-xl font-medium">Poritosh Modak</p>
+                        <p>Head of the Department</p>
+                        <p>Computer Science and Technology (SPI)</p>
+                    </div>
                 </div>
             </div>
         </div>
