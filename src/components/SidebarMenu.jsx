@@ -81,8 +81,8 @@ const SidebarMenu = () => {
                             Download our Android App
                         </p>
                         <Link
-                            to="https://drive.google.com/uc?export=download&id=1e0CuS4edQHRHIBKpSYSNfWxhRwsQyw8V"
-                            download="https://drive.google.com/uc?export=download&id=1e0CuS4edQHRHIBKpSYSNfWxhRwsQyw8V"
+                            to="https://drive.google.com/uc?export=download&id=11VBtQXLsV1YutS9PRTF1lXr3-n1mdoqU"
+                            download="https://drive.google.com/uc?export=download&id=11VBtQXLsV1YutS9PRTF1lXr3-n1mdoqU"
                         >
                             <button className="bg-[#076cab] hover:bg-black/20 flex items-center justify-center gap-2 text-white/50 px-4 py-2 rounded-lg">
                                 <Download className="w-5 h-5" />
@@ -92,7 +92,9 @@ const SidebarMenu = () => {
                     </div>
 
                     <div className="mt-10 text-center">
-                        <p className="text-2xl font-medium text-white/50">Supervised by</p>
+                        <p className="text-2xl font-medium text-white/50">
+                            Supervised by
+                        </p>
                         <p className="text-xl font-medium">Poritosh Modak</p>
                         <p>Head of the Department</p>
                         <p>Computer Science and Technology (SPI)</p>
