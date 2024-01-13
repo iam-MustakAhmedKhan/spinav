@@ -4,7 +4,6 @@ import datas from '../data/mapArray.json';
 import { MapInteractionCSS } from 'react-map-interaction';
 import { useEffect, useState } from "react";
 import { Circles } from "react-loader-spinner";
-import { data } from "autoprefixer";
 
 
 const Map = () => {
