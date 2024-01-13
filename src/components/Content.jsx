@@ -3,7 +3,7 @@ import Navbar from './Navbar';
 import Hero from './Hero';
 import NavigationBox from './NavigationBox';
 import SidebarMenu from './SidebarMenu';
-import Notification from './Notification';
+// import Notification from './Notification';
 
 
 
@@ -25,7 +25,7 @@ const Content = () => {
                       <SidebarMenu />
 
                       
-                        <Notification/>
+                        {/* <Notification/> */}
             
 
                   </div>
